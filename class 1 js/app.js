@@ -1,5 +1,8 @@
 
-alert ("hasan")
+// alert ("hasan")
+
+
+alert ("s \n m \n i \n t")
 
 
 
