@@ -2,7 +2,7 @@
 // alert ("hasan")
 
 
-alert ("s \n m \n i \n t")
+alert ("s\nm\ni\nt")
 
 
 
