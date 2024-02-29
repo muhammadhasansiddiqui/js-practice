@@ -1,39 +1,22 @@
-
-document.write =(
-    "<h1>Hello World</h1>"
-
-    + "<h2>Hello World</h2>"
-    + "<h3>Hello World</h3>"
-    + "<h4>Hello World</h4>"
-
-)
-
-
 var steps = document.getElementById("steps");
 
 function counter() {
-  var hours = new Date().getHours();
-  var minute = new Date().getMinutes();
-  var second = new Date().getSeconds();
-  var miliSecond = 0;
-    setInterval(function () {
-    miliSecond++;
-    if (miliSecond == 100) {
-      miliSecond = 0;
-      second++;
-    }
-    if (second == 60) {
-      second = 0;
-      minute++;
-    }
-    steps.innerHTML = `${(hours % 12) || 12}:${minute}:${second}:${miliSecond}`;
+  setInterval(function () {
+    var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    var milliseconds = date.getMilliseconds();
+
+    // Format the time with leading zeros
+    hours = (hours % 12) || 12;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    milliseconds = milliseconds < 100 ? '0' + milliseconds : milliseconds;
+
+    steps.innerHTML = `${hours}:${minutes}:${seconds}:${milliseconds}`;
   }, 10);
 }
 
-function blinkText() {
-  if (steps.style.display == "none") {
-    steps.style.display = "";
-  } else {
-    steps.style.display = "none";
-  }
-}
+// Call the counter function to start updating the time
+counter();
