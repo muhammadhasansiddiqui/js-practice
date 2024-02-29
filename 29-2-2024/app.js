@@ -16,5 +16,13 @@ var c = a + b;
 
 console.log(c);
 
+// 42 Variable for Booleans
+
+
 var feepay = true ;
 console.log(feepay);
+
+// // 43 Undefined
+
+// var name = "mark";
+// name = undefined ;
