@@ -1,5 +1,6 @@
 
 
+
 var firstName = "hasan" ; 
 
 console.log(firstName);
@@ -26,3 +27,10 @@ console.log(feepay);
 
 // var name = "mark";
 // name = undefined ;
+
+
+// null
+
+var name = null;
+var city = "karachi";
+city = null;
