@@ -35,5 +35,10 @@ console.log(z);
 var name = null;
 var city = "karachi";
 city = null;
+console.log(city);
+
+var  a = null;
+console.log(a);
+
 
 
