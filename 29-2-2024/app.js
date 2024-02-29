@@ -25,8 +25,9 @@ console.log(feepay);
 
 // // 43 Undefined
 
-// var name = "mark";
-// name = undefined ;
+var z ;
+console.log(z);
+
 
 
 // null
@@ -34,3 +35,5 @@ console.log(feepay);
 var name = null;
 var city = "karachi";
 city = null;
+
+
