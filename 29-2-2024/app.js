@@ -42,3 +42,11 @@ console.log(a);
 
 
 
+// 46 Dynamic Data Types
+
+var age = (34);
+console.log(age);
+age = "hasan";
+console.log(age);
+age = true;
+console.log(age);
