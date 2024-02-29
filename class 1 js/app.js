@@ -2,12 +2,14 @@
 // alert ("hasan")
 
 
-alert ("s\nm\ni\nt")
+// alert ("s\nm\ni\nt")
 
 
+var fullName =("hasan s")
 
+alert (fullName)
 
-
+console.log(fullName)
 
 // // //---------------alert 1st chp paratice---------------
 
