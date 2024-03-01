@@ -82,3 +82,8 @@ console.log(total);
 total = totalCost / totalRent;      
 console.log(total);
 
+
+ var city = prompt( "karachi" , "pk") ;
+console.log(city);
+
+
