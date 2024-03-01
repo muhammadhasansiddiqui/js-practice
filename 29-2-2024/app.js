@@ -79,11 +79,18 @@ console.log(total);
 
 
  
-total = totalCost / totalRent;      
-console.log(total);
+// total = totalCost / totalRent;      
+// console.log(total);
+
+//  var city = prompt( "city" , "karachi"  ) ;
+// console.log(city);
 
 
- var city = prompt( "city" , "karachi") ;
-console.log(city);
+// var firendName =  prompt( "mr." +  "firendName" );
 
+// console.log(firendName);
 
+firstName = prompt ("enter yuor name" , "hasan");
+
+firstName = ("mr." + "" +  "" + firstName );
+console.log(firstName);
