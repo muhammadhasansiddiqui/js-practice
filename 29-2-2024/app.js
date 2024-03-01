@@ -66,10 +66,19 @@ var a = undefined;
 console.log(typeof a);
 
 
-var totalCost =  10000 ;
-var totalRent =  1000 ;
+var totalCost =  100 ;
+var totalRent =  40 ;
 
 var total = totalCost - totalRent; 
 
+console.log(total);
+
+
+total = totalCost * totalRent;
+console.log(total);
+
+
+ 
+total = totalCost / totalRent;      
 console.log(total);
 
