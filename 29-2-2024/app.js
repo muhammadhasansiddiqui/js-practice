@@ -1,12 +1,12 @@
 
 
 
-var firstName = "hasan" ; 
+var firstName = "hasan";
 
 console.log(firstName);
 // alert(firstName);
 
-var msg ="it's a car";
+var msg = "it's a car";
 
 console.log(msg);
 
@@ -20,12 +20,12 @@ console.log(c);
 // 42 Variable for Booleans
 
 
-var feepay = true ;
+var feepay = true;
 console.log(feepay);
 
 // // 43 Undefined
 
-var z ;
+var z;
 console.log(z);
 
 
@@ -37,7 +37,7 @@ var city = "karachi";
 city = null;
 console.log(city);
 
-var  a = null;
+var a = null;
 console.log(a);
 
 
@@ -50,3 +50,26 @@ age = "hasan";
 console.log(age);
 age = true;
 console.log(age);
+
+// 47 Type of Operator
+
+var firstName = "hasan";
+console.log(typeof firstName);
+var age = 34;
+console.log(typeof age);
+var isMarried = true;
+console.log(typeof isMarried);
+var city = null;
+console.log(typeof city);
+
+var a = undefined;
+console.log(typeof a);
+
+
+var totalCost =  10000 ;
+var totalRent =  1000 ;
+
+var total = totalCost - totalRent; 
+
+console.log(total);
+
