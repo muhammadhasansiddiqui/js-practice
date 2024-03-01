@@ -66,10 +66,10 @@ var a = undefined;
 console.log(typeof a);
 
 
-var totalCost =  100 ;
-var totalRent =  40 ;
+var totalCost = 100;
+var totalRent = 40;
 
-var total = totalCost - totalRent; 
+var total = totalCost - totalRent;
 
 console.log(total);
 
@@ -78,7 +78,7 @@ total = totalCost * totalRent;
 console.log(total);
 
 
- 
+
 // total = totalCost / totalRent;      
 // console.log(total);
 
@@ -90,7 +90,7 @@ console.log(total);
 
 // console.log(firendName);
 
-firstName = prompt ("enter yuor name" , "hasan");
+firstName = prompt("enter yuor name", "hasan");
 
-firstName = ("mr." + "" +  "" + firstName );
+firstName = ("mr." + "" + "" + firstName);
 console.log(firstName);
