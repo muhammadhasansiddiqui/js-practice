@@ -10,7 +10,9 @@
 
 // console.log(num1 + num2);
 
+// var user = prompt("Enter your name"  ,"hasan");
 
+// console.log(user);
 
 
 
