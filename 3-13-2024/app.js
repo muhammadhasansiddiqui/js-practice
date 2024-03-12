@@ -20,3 +20,6 @@
 // if (firstName.toUpperCase() == ++"HASAN") {
 //     prompt("welcome")
 // }
+
+// var age = +prompt("enter your age", "20")
+// console.log(typeof age)
