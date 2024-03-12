@@ -6,9 +6,9 @@
 
 // var  passingRatio = 70
 
-// console.log(++passingRatio)
+// console.log(  "++passingRatio" ,++passingRatio)
 
-// console.log(--passingRatio)
+// console.log(--passingRatio ,"--passingRatio ")
 
-// console.log(passingRatio++)
-// console.log(passingRatio)
+// console.log(passingRatio++ , "passingRatio++")
+// console.log(passingRatio , "passingRatio")
