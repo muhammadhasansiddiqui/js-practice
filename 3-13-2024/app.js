@@ -28,3 +28,6 @@
 
 // var age = +prompt("enter your age", "20")
 // console.log(myName ,age)
+
+
+alert (ramzan)
