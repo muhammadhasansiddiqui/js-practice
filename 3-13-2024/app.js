@@ -23,3 +23,8 @@
 
 // var age = +prompt("enter your age", "20")
 // console.log(typeof age)
+
+var myName = prompt("enter your name", "hasan")
+
+var age = +prompt("enter your age", "20")
+console.log(myName ,age)
