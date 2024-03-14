@@ -64,3 +64,27 @@
 
 //   alert("karachi wale ki biryani le ayo")
 // }
+
+// var language = prompt("Enter your language")
+
+// if (language === "javascript") {
+
+//     var city = prompt("Enter your city")
+//     if (city === "karachi") {
+// var exp = +prompt("Enter your experience")
+// if (exp >= 2) {
+//     alert("You are eligible for job")
+// }else {
+//     alert("bare ho kra ayo")
+// }
+
+//     }else {
+//         alert("karachi ajyo")
+//     }
+    
+// }else {
+//     alert("javascript sikhon")
+// }
+
+
+
