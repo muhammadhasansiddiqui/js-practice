@@ -83,7 +83,7 @@
 //     }
     
 // }else {
-//     alert("javascript sikhon")
+    alert("javascript sikhon")
 // }
 
 
