@@ -90,3 +90,8 @@
 // var userName = prompt("Enter your name") || "guset"
 // alert( userName)
 
+// var userName = prompt("Enter your name")
+
+// var isAvailabel = userName && "YES" || "naME TU ENTER KRO";
+
+// alert(isAvailabel)
