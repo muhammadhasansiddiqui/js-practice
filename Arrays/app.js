@@ -17,5 +17,6 @@
 
 // var student = [ "mr", "HASAN", "SIDDIQUI" ];
 
-// student.pop();
+// var returnvalue  = student.pop();
+// console.log(returnvalue);
 // console.log(student);
