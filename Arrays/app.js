@@ -14,3 +14,8 @@
 
 // student [5] = "uzair"
 // console.log(student);
+
+// var student = [ "mr", "HASAN", "SIDDIQUI" ];
+
+// student.pop();
+// console.log(student);
