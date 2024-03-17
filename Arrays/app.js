@@ -44,3 +44,8 @@
 // console.log(returnvalue);
 
 // console.log(student);
+
+// var student = [ "mr", "HASAN", "SIDDIQUI"];
+// var returnvalue = student.splice(2, 0 , "bahi");
+// console.log(returnvalue);
+// console.log(student);
