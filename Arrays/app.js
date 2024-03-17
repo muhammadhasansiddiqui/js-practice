@@ -29,4 +29,18 @@
 // console.log(returnvalue1);
 // console.log(student);
 
-var 
+
+// var student = [ "mr", "HASAN", "SIDDIQUI"];
+// var returnvalue = student.unshift("uzair", "abc");
+// console.log(returnvalue);
+// console.log(student);
+
+
+
+// var student = [ "mr", "HASAN", "SIDDIQUI"];
+
+// var returnvalue = student.shift();
+
+// console.log(returnvalue);
+
+// console.log(student);
