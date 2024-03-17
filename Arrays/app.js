@@ -20,3 +20,11 @@
 // var returnvalue  = student.pop();
 // console.log(returnvalue);
 // console.log(student);
+
+// var student = [ "mr", "HASAN", "SIDDIQUI"];
+
+// var returnvalue1   = student.push("uzair" , "abc");
+
+
+// console.log(returnvalue1);
+// console.log(student);
