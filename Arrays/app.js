@@ -64,3 +64,9 @@
 // console.log(value);
 // console.log(student);
  
+
+// var student = [ "mr", "HASAN", "SIDDIQUI"];
+// var value   = student.unshift( "MY NAME " );
+// console.log(value);
+// console.log(student);
+ 
