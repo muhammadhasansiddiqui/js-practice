@@ -35,8 +35,6 @@
 // console.log(returnvalue);
 // console.log(student);
 
-
-
 // var student = [ "mr", "HASAN", "SIDDIQUI"];
 
 // var returnvalue = student.shift();
@@ -49,3 +47,20 @@
 // var returnvalue = student.splice(2, 0 , "bahi");
 // console.log(returnvalue);
 // console.log(student);
+
+
+// var student = [ "mr", "HASAN", "SIDDIQUI"];
+// var returnvalue = student.slice(1);
+// console.log(returnvalue);
+// console.log(student);
+
+// var student = [ "mr", "HASAN", "SIDDIQUI"];
+// var returnvalue = student.slice(1, 3);
+// console.log(returnvalue);
+// console.log(student);
+
+// var student = [ "mr", "HASAN", "SIDDIQUI"];
+// var value   = student.shift();
+// console.log(value);
+// console.log(student);
+ 
