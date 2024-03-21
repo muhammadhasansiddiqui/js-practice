@@ -118,3 +118,14 @@
 // var returnvalue = student.unshift("abc","abc1","abc2","abs","ss");
 // console.log(returnvalue)
 // console.log(student)
+
+// //                0         1         2      3        4        5        6          7
+// var student = ["Hasan","siddiqui" , "abc" ,"xyz" , "hello" ,"world" ,"hello" ,"pakistan"]
+// var returnvalue = student.slice(-6);
+// console.log(returnvalue)
+// console.log(student)
+
+// var student = "Hasan Siddiqui"
+//    var returnvalue =student.slice(0,6);
+//  console.log(returnvalue)
+// console.log(student)
