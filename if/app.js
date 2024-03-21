@@ -100,3 +100,21 @@
 // var firstName =[ "hasan"   ,"","","",""     ,                         "siddiqui"]
 // var copy = [firstName.slice (-6)]
 // console.log(copy)
+
+// var student = ["Hasan","siddiqui"]
+// student.pop();
+// console.log(student)
+
+// var student = ["Hasan","siddiqui"]
+// student.push("id num # 122");
+// console.log(student)
+
+// var student = ["Hasan","siddiqui"]
+// var returnvalue = student.shift();
+// console.log(returnvalue)
+// console.log(student)
+
+// var student = ["Hasan","siddiqui"]
+// var returnvalue = student.unshift("abc","abc1","abc2","abs","ss");
+// console.log(returnvalue)
+// console.log(student)
