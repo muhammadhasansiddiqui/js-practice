@@ -95,3 +95,8 @@
 // var isAvailabel = userName && "YES" || "naME TU ENTER KRO";
 
 // alert(isAvailabel)
+
+
+// var firstName =[ "hasan"   ,"","","",""     ,                         "siddiqui"]
+// var copy = [firstName.slice (-6)]
+// console.log(copy)

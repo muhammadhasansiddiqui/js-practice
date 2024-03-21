@@ -70,3 +70,8 @@
 // console.log(value);
 // console.log(student);
  
+
+var student = [ "MR", "HASAN", "SIDDIQUI"];
+var value = student.splice(0, 1, "my name" );
+console.log(value);
+console.log(student);
