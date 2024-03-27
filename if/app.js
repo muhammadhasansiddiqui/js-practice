@@ -129,3 +129,9 @@
 //    var returnvalue =student.slice(0,6);
 //  console.log(returnvalue)
 // console.log(student)
+
+
+var cities = ["Karachi", "Lahore", "Islamabad", "Faisalabad"];
+var newValue = cities.slice (0);
+console.log(newValue)
+console.log(cities)
