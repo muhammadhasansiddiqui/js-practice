@@ -13,4 +13,7 @@
 //     console.log(table + "x" + i + "=" + table * i);
 // }
 
-// console.log("Hello World");
+//  var one = ("Hello World");
+// for(var i = 1;  i <= 10;  i++){
+//     console.log(i , one);
+// }
