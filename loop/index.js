@@ -17,3 +17,11 @@
 // for(var i = 1;  i <= 10;  i++){
 //     console.log(i , one);
 // }
+
+var students = ["Ali", "Hamza", "Usman", "Hassan"];
+for (var i = 0; i < students.length; i++) {
+    if (students[i] === "Ali") {
+        console.log("Hello Ali");
+    }
+    else { console.log("nahi hai"); }
+}
