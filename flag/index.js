@@ -81,3 +81,37 @@
 // var str = "Hasan";
 //  str += " Siddiqui";
 //  console.log(str);
+
+// var palindromes = ["mum", "mom", "dad", "madam" , "radar" ,"level","civic"
+//                   ,"kayak","racecar","noon","rotator","refer" ,"deified"];
+
+// var flag = false;
+// var  list =      prompt = ("Enter a word to check if it is a palindrome")
+// if (list === palindromes) {
+//     flag = true;
+// }
+// else {
+
+//     console.log("not a palindrome");
+// }
+
+
+
+// var palindromes = ["mum", "mom", "dad", "madam", "radar", "level", "civic", "kayak", "racecar", "noon", "rotator", "refer", "deified"];
+// var flag = false;
+// var Checklist = prompt("Enter a word to check if it is a palindrome");
+
+// Checklist = Checklist.toLowerCase();
+
+// for (var i = 0; i < palindromes.length; i++) {
+//     if (Checklist === palindromes[i]) {
+//         flag = true;
+//         break;
+//     }
+// }
+
+// if (flag) {
+//     alert("The word '" + Checklist + "' is a palindrome.");
+// } else {
+//     alert("The word '" + Checklist + "' is not a palindrome.");
+// }
