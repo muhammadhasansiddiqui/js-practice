@@ -12,8 +12,21 @@
 // }
 
 
+// var country = ["Pakistan", "India", "China", "Bangladesh"];
 
+// var flag = false;
 
+// for (var i = 0; i < country.length; i++) {
+//     if (country[i] === "China") {
+//         flag = true;
+//         console.log("welcome to china");
+//         break;
+//     }
+
+// }
+//     if (flag === false) {
+//         console.log("not found");
+//     }
 
 
 
