@@ -60,3 +60,12 @@
 // } else {
 //     console.log("You are not welcome here");
 // }
+
+
+// for (var i = 0; i < 10; i++) {
+//     break;
+//     console.log(i);
+//     if ( i === 7)
+//     {
+//     }
+// }
