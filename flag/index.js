@@ -69,3 +69,15 @@
 //     {
 //     }
 // }
+
+
+
+
+// var str = "Hasan";
+
+// var str = str +  " siddiqui";
+// console.log (str)
+
+// var str = "Hasan";
+//  str += " Siddiqui";
+//  console.log(str);
