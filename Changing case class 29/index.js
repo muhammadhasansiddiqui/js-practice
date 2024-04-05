@@ -47,3 +47,9 @@
 
 // console.log(subarr [0])
 
+// changing case
+
+
+// var fullName = "Hasan Siddiqui";
+// var fullName = fullName.toUpperCase();
+// console.log(fullName);
