@@ -42,3 +42,8 @@
 //     }
 
 
+// var arr = [['ghous']]
+// var subarr = arr[0]
+
+// console.log(subarr [0])
+
