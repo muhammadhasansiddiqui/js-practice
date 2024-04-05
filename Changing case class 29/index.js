@@ -7,3 +7,14 @@
 //     }
 // }
 // console.log(min)
+
+
+// var arr = [`Hasan`, `siddiqui`,`zeeshan`]
+ 
+
+// var nameHasan = (`Hasan`)
+// var nameZeeshan = (`Zeeshan`)
+
+// arr [nameHasan] = `zeeshan`;
+// arr [nameZeeshan] = `hasan`;
+// console.log(arr)
