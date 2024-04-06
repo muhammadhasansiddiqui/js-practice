@@ -101,3 +101,6 @@
 
 // var firstChar = "hasan".charAt("3")
 // console.log(firstChar)
+
+// var firstChar = "hasan"[0]
+// console.log(firstChar)
