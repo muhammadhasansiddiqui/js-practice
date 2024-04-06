@@ -53,3 +53,9 @@
 // var fullName = "Hasan Siddiqui";
 // var fullName = fullName.toUpperCase();
 // console.log(fullName);
+
+
+// var fullName = "hasan";
+// var firstChar =fullName.slice(0,1) .toUpperCase();
+// var result = firstChar + fullName.slice(1);
+// console.log(result);
