@@ -59,3 +59,14 @@
 // var firstChar =fullName.slice(0,1) .toUpperCase();
 // var result = firstChar + fullName.slice(1);
 // console.log(result);
+
+
+// strings finding segments
+
+
+
+// var text = "My Name Is Hasan";
+
+// for (var i = 0; i < text.length; i++) {
+//     console.log(text.slice(i , i + 4 ) === "Name" );
+// }
