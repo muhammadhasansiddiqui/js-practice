@@ -98,3 +98,6 @@
 //     else {
 //         console.log("Not Found");
 //     }}
+
+// var firstChar = "hasan".charAt("3")
+// console.log(firstChar)
