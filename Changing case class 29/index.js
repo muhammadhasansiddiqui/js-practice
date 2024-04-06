@@ -10,7 +10,7 @@
 
 
 // var arr = [`Hasan`, `siddiqui`,`zeeshan`]
- 
+
 
 // var nameHasan = (`Hasan`)
 // var nameZeeshan = (`Zeeshan`)
@@ -20,13 +20,13 @@
 // console.log(arr)
 
 // for (var i = 0; i < 5; i++) {
-    
+
 
 //     for (var j = 0; j < 5; j++) {
 //         console.log(i,j);
 //     }
 
-   
+
 
 // }
 
@@ -69,4 +69,21 @@
 
 // for (var i = 0; i < text.length; i++) {
 //     console.log(text.slice(i , i + 4 ) === "Name" );
+// }
+
+
+
+// var text = "Shehbaz Sharif and Punjab Chief Minister Maryam Nawaz were found by the authorities on Friday.";
+
+// var user = prompt("Enter a word");
+
+// for (var i = 0; i < text.length; i++) {
+
+//     if (text.slice(i, i + user.length) === user) {
+//         console.log("Found");
+//     }else {
+//         console.log("Not Found");
+//     }
+
+
 // }
