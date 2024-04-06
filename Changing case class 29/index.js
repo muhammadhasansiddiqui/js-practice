@@ -104,3 +104,6 @@
 
 // var firstChar = "hasan"[0]
 // console.log(firstChar)
+
+// var firstChar = "hasan".indexOf("n")
+// console.log(firstChar)
