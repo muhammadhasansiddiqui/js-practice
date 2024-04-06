@@ -87,3 +87,14 @@
 
 
 // }
+
+// var text = 
+//   "Shehbaz Sharif and Punjab Chief Minister Maryam Nawaz were found by the authorities on Friday.";
+
+//   for (var i = 0; i < text.length; i++) {
+//     if (text.indexOf("Shehbaz Sharif") !== -1) {
+//       console.log("Found");
+//     }
+//     else {
+//         console.log("Not Found");
+//     }}
