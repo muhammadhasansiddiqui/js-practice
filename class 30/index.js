@@ -32,3 +32,6 @@
 
 // var str = "Pakistan and Saudi Arabia emphasise need for dialogue between Islamabad and New Delhi to resolve Kashmir dispute  Islamabad";
 // console.log(str.replace("Islamabad", "Karachi"));
+
+// var str = "Pakistan and Saudi Arabia emphasise need for dialogue between Islamabad and New Delhi to resolve Kashmir dispute  Islamabad";
+// console.log(str.replace(/Islamabad/g, "Karachi"));
