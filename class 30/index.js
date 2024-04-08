@@ -21,3 +21,6 @@
  
 // var str = "Hasan Siddiqui";
 // console.log(str.charAt(1));
+
+// var str = "Hasan Siddiqui";
+// console.log(str[0]);
