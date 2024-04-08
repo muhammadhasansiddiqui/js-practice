@@ -16,3 +16,8 @@
 // }
 
 // }
+
+//Finding a character at a location
+ 
+// var str = "Hasan Siddiqui";
+// console.log(str.charAt(1));
