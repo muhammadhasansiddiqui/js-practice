@@ -24,3 +24,8 @@
 
 // var str = "Hasan Siddiqui";
 // console.log(str[0]);
+
+//Strings:Replacing characters
+
+// var str = "Hasan Siddiqui";
+// console.log(str.replace("Siddiqui","Khan"));
