@@ -74,3 +74,14 @@
 // console.log(parseInt(num));
 // var num = "5.65555";
 // console.log(parseFloat(num));
+
+//Converting strings to numbers, numbers to strings
+
+// var num = 4.8774;
+
+// console.log(num.toString());
+
+//Controlling the length of decimals
+
+// var num = 4.8;
+// console.log(num.toFixed(2));
