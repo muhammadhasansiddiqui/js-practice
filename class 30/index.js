@@ -86,5 +86,7 @@
 // var num = 4.8;
 // console.log(num.toFixed(2));
 
-var title = "Eid Mubarak";
-console.log(title.toUpperCase());
+// var title = "Eid Mubarak";
+// console.log(title.toUpperCase());
+
+
