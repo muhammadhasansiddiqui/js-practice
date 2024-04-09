@@ -63,3 +63,6 @@
 
 // var num = "10" - "hello";
 // console.log(num);
+
+// var num = "10" + 5;
+// console.log(num);
