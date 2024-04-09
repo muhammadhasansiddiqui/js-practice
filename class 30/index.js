@@ -72,3 +72,5 @@
 
 // var num = "565555";
 // console.log(parseInt(num));
+// var num = "5.65555";
+// console.log(parseFloat(num));
