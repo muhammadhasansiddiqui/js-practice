@@ -43,3 +43,6 @@
 // console.log(Math.round(num,));
 // console.log(Math.floor(num));
 //  console.log(Math.ceil(num));
+
+// var num = 4.1;
+// console.log(Math.ceil(num))
