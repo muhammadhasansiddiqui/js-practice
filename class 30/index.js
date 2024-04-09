@@ -66,3 +66,9 @@
 
 // var num = "10" + 5;
 // console.log(num);
+
+// // var num = +"2.547474";
+// // console.log(num);
+
+// var num = "565555";
+// console.log(parseInt(num));
