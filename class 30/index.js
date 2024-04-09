@@ -49,3 +49,6 @@
 
 // var num = 4.9;
 // console.log(Math.floor(num))
+
+// var num = 4.3;  
+// console.log(Math.round(num))
