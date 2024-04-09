@@ -35,3 +35,11 @@
 
 // var str = "Pakistan and Saudi Arabia emphasise need for dialogue between Islamabad and New Delhi to resolve Kashmir dispute  Islamabad";
 // console.log(str.replace(/Islamabad/g, "Karachi"));
+
+
+//Rounding numbers
+
+// var num = 3.14159;
+// console.log(Math.round(num,));
+// console.log(Math.floor(num));
+//  console.log(Math.ceil(num));
