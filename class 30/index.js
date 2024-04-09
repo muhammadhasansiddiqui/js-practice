@@ -52,3 +52,8 @@
 
 // var num = 4.3;  
 // console.log(Math.round(num))
+
+//Generating random numbers
+
+// var random =Math.round(Math.random() * 10); 
+// console.log(random);
