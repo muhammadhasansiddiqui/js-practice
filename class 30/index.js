@@ -57,3 +57,9 @@
 
 // var random =Math.round(Math.random() * 10); 
 // console.log(random);
+
+
+//Converting strings to integers and decimals
+
+// var num = "10" - "hello";
+// console.log(num);
