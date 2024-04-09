@@ -46,3 +46,6 @@
 
 // var num = 4.1;
 // console.log(Math.ceil(num))
+
+// var num = 4.9;
+// console.log(Math.floor(num))
