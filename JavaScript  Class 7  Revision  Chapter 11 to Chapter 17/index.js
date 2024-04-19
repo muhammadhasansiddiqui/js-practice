@@ -25,3 +25,13 @@
 // } else {
 //     console.log("Not hire");
 // }
+
+// var arr = ["hasan", "uzair" , "zeeshan" , "rayyan", "mesum"];
+
+// var arr = ""
+// console.log(arr [2]);
+
+
+// var arr = ["hasan", "uzair" , "zeeshan" , "rayyan", "mesum"];
+// arr.push("quid-e-azam" , "fashi")
+// console.log(arr);
