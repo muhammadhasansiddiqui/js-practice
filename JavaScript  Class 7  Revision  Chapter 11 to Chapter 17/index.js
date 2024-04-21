@@ -82,3 +82,15 @@
 // else { 
 //       console.log("It's not a palindrome");
 // }
+
+// var arr  = [11,22,34,35,12,77,10]
+// var min =  arr[0];
+// var max =  arr[0];
+
+
+// for (var i = 0; i < arr.length; i++) {
+//     if (arr[i] < min) {
+//     min = arr[i];
+//   }
+// }
+// console.log(min);
