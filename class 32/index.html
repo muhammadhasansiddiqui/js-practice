@@ -1,13 +1,82 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
+
+<center>
+    <div class="container">
+        <h2 id="bur">Burger</h2>
+        <h2 id="bur">Biryani</h2>
+
+        
+
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM1y3ur5z3-ys1loKJ0c-5J7VX4L_eQTn2y_DVyjYfwg&s" alt="">
+        <br><br>
+        <button onclick="addToCart()">ADD TO CART</button>
+    </div>
+    <ul id="cartList">
+    </ul>
+</center>
 <body>
-    
+
 
     <script src="index.js"></script>
 </body>
+
+</html> -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Restaurant Menu</h1>
+    </header>
+    <main>
+        <section id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li> <img src="https://cdn.pixabay.com/photo/2023/03/05/11/02/burger-7831128_1280.jpg" alt="Burger">
+                    <h3>Burger</h3>
+                    <p>$10</p> <button onclick="addToCart('burger')">Add to Cart</button>
+                </li>
+                <li> <img src="https://cdn.pixabay.com/photo/2023/03/05/11/02/burger-7831128_1280.jpg" alt="Pizza">
+                    <h3>Pizza</h3>
+                    <p>$15</p> <button onclick="addToCart('pizza')">Add to Cart</button>
+                </li>
+                <li> <img src="https://cdn.pixabay.com/photo/2023/03/05/11/02/burger-7831128_1280.jpg" alt="Pasta">
+                    <h3>Pasta</h3>
+                    <p>$12</p> <button onclick="addToCart('pasta')">Add to Cart</button>
+                </li>
+            </ul>
+        </section>
+        <section id="cart">
+            <h2>Cart</h2>
+            <ul id="cartList"></ul>
+            <p>Total: $<span id="total">0</span></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Restaurant</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
 </html>
