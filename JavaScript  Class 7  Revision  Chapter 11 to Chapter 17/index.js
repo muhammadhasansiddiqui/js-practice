@@ -69,16 +69,16 @@
 //       console.log("It's not a palindrome");
 //}
 
- var work = prompt("Enter your work");
-var reverse = "";   
+//  var work = prompt("Enter your work");
+// var reverse = "";   
 
-for (var i = work.length - 1; i >= 0; i--) {
-      reverse  += work[i];
-}
+// for (var i = work.length - 1; i >= 0; i--) {
+//       reverse  += work[i];
+// }
 
-if (reverse === work) {
-      console.log(" It's a palindrome");
-}
-else { 
-      console.log("It's not a palindrome");
-}
+// if (reverse === work) {
+//       console.log(" It's a palindrome");
+// }
+// else { 
+//       console.log("It's not a palindrome");
+// }
