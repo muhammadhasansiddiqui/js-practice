@@ -55,8 +55,30 @@
 // var school = "smit"
 // console.log(school.slice(0,2));
 
-for (var i = 0; i <= 2; i++) {
-    console.log(i)
-    
+// var work = prompt("Enter your work");
+// var reverse = "";
+ 
+// for (var i = work.length - 1; i >= 0; i--) {
+//       reverse  += work[i];
+// }
+
+// if (reverse === work) {
+//       console.log(" It's a palindrome");
+// }
+// else {
+//       console.log("It's not a palindrome");
+//}
+
+ var work = prompt("Enter your work");
+var reverse = "";   
+
+for (var i = work.length - 1; i >= 0; i--) {
+      reverse  += work[i];
 }
-console.log(i);
+
+if (reverse === work) {
+      console.log(" It's a palindrome");
+}
+else { 
+      console.log("It's not a palindrome");
+}
