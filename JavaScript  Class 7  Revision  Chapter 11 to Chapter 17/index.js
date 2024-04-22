@@ -94,3 +94,10 @@
 //   }
 // }
 // console.log(min);
+
+var arr = [11,12,14,15,16,17,18,19,20];
+
+for (var i = 0; i < arr.length; i++) {
+console.log(arr[i]-arr[i + 1]);
+
+}
