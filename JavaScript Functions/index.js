@@ -19,6 +19,10 @@
 // student(name3 , time)
 
 
+
+
+
+
 // function student(name) {
 //     console.log("Hello " + name);
 // }
@@ -56,3 +60,5 @@
 // let a = 10 
 // let b = 20
 // com(a, b)
+
+
