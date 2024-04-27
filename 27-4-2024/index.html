@@ -5,27 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
     <img id="firstImage"
         src="https://static.vecteezy.com/system/resources/previews/022/778/254/non_2x/brown-horse-galloping-in-the-field-illustration-ai-generative-free-photo.jpg"
-        onmouseover="hover()" onmouseout="unhover()" alt="">
+        onmouseover="hover(this)"
+         onmouseout="unhover(this)" 
+         onclick="hide(this)"
+        style="width: 100vh;"
+        
+        >
 
 
 
-
-<script>
-        function hover() {
-            const img = document.getElementById('firstImage');
-            img.src = "(https://static.vecteezy.com/system/resources/previews/022/778/254/non_2x/brown-horse-galloping-in-the-field-illustration-ai-generative-free-photo.jpg)"; // Replace "(link unavailable)" with the URL of the image you want to show on hover
-          }
-          
-          function unhover() {
-            const img = document.getElementById('firstImage');
-            img.src = "(https://www.icegif.com/wp-content/uploads/2023/05/icegif-1403.gif)"; // Replace with your original image URL
-          }
-</script>
     <script src="index.js"></script>
 </body>
 
