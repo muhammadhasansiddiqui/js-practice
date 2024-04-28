@@ -1,19 +1,49 @@
-body{
+body {
+
+box-shadow: 10px 5px 12px 8px gold;
+
+background-image: url(https://media2.giphy.com/media/3oEduGfXrGCLjIV46A/giphy.gif?cid=6c09b952yhk0vcm5zf0yp2mlouk846h590whnlyuvcznpkxm&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g)
+;
+
+height: 100vh;
+background-repeat: no-repeat;
+background-size:cover ;
 
 
-    background: #000;
-display: flex;
-justify-content: center;
-text-align: center;
-padding: 100px;
-margin: 0;
+     .container {
+        box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;       border-radius: 10px;
+       height: 65vh;
+    } 
+    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 100px;
+    margin: 0;
 
 
 }
 
-img{
-    
-border-radius: 10px;
-box-shadow:  0px 10px 18px  darkorange;
+img {
+
+    border-radius: 10px;
+
+}
+
+.container {
+
+
+    padding-left: 30px;
+    padding: 20PX !important;
+    margin: 50PX;
+    transition-duration: 0.7s;
+
+
+}
+
+.container:hover {
+
+    transform: rotate(360deg);
+
 
 }
