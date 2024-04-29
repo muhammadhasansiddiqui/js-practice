@@ -17,3 +17,12 @@
 // for (var i = 0; i < 100000; i++) {
 //   console.log(i);
 // }
+
+// var userName = prompt("What is your name?");
+// var low = userName.toLowerCase();
+// console.log(low);
+
+
+// var userName = prompt("What is your name?");
+// var low = userName.toLocaleLowerCase();
+// console.log(low);
