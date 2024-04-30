@@ -89,10 +89,41 @@
 //     alert("Please enter your born year");
 // }
 
-
-
 // document.write("Your age is " + age);
 
 
 
+// var names = [["HASAN ","siddiqui"],["zee","mes"]]
 
+// for (var i = 0; i < names.length; i++) {
+
+//     for (var j = 0; j < names[i].length; j++) {
+
+//         console.log(names[i][j]);
+//     }
+// }
+
+// var names = [ ["Hasan"],["uziar"]];
+
+// for ( var i = 0 ; i < names.length; i++) {
+
+//     for ( var j= 0 ; j < names[j].length; j++){
+
+// console.log (names[i],[j])
+
+//     }
+
+// }
+
+// var para = 
+//   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod dolor.";
+
+//   var para = para.replace(/dolor/g, "$")
+//   console.log(para.replaceAll("elit","eat"));
+//   console.log(para);
+    
+
+// var number = 3.5;
+// console.log(Math.round(number));
+// console.log(Math.floor(number));
+// console.log(Math.ceil(number));
