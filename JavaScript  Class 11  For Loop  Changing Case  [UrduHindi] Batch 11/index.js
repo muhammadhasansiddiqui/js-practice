@@ -27,6 +27,6 @@
 // var low = userName.toLocaleLowerCase();
 // console.log(low);
 
-var userName = prompt("What is your name?");
-var capitalized = userName.charAt(0).toUpperCase() + userName.slice(1).toLowerCase();
-console.log(capitalized);
+// var userName = prompt("What is your name?");
+// var capitalized = userName.charAt(0).toUpperCase() + userName.slice(1).toLowerCase();
+// console.log(capitalized);
