@@ -30,3 +30,69 @@
 // var userName = prompt("What is your name?");
 // var capitalized = userName.charAt(0).toUpperCase() + userName.slice(1).toLowerCase();
 // console.log(capitalized);
+
+
+
+// var firstName = prompt("What is your first name?"); "hasan siddiqui";  
+// var result = "";
+
+// for (var i =0; i < firstName.length; i++) {
+//    if (i === 0 ) {
+//     result += firstName[i].toUpperCase();
+//    }
+   
+//    else if (firstName[i - 1] === " ") {
+//     result += firstName[i].toUpperCase();
+//    }
+   
+//    else {
+//     result += firstName[i]
+//    }
+
+// }  
+
+// console.log("Name = ",result);
+
+
+
+// var student = prompt("Enter your name");
+// var result = "";
+
+// for (var i = 0; i < student.length; i++) {
+
+// if (i === 0) {
+//     result += student[i].toUpperCase();
+// }
+// else if ( student[i - 1] === " ") {
+//     result += student[i].toUpperCase();
+// }
+// else {
+//     result += student[i];
+// }
+// }
+
+// console.log(result);
+// document.write(result);
+
+// var bornYear = +prompt("Enter your born year");
+// var  sal = ""
+// var year = new Date().getFullYear();
+// var age = year - bornYear;
+
+
+// if (
+//     bornYear === " " ||
+//     bornYear === null ||
+//     bornYear === undefined ||
+//     isNaN(bornYear)
+// ) {
+//     alert("Please enter your born year");
+// }
+
+
+
+// document.write("Your age is " + age);
+
+
+
+
