@@ -1,6 +1,11 @@
-var randomValue = "sjgegewdugewqruwqr32481@@@@#"
+// parseFloat
 
-for (var i = 0; i < 10; i++) {
-    var randomNumer =Math.round(Math.random () * randomValue.length ) ;
-    console.log(randomValue[randomNumer]);
-}
+
+var num = parseFloat("1.2345")
+num = parseFloat("1.2345"             
+
+
+
+
+)
+console.log(num)
