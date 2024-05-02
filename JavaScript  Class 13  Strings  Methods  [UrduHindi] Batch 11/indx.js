@@ -6,5 +6,5 @@
 
 
 
-var str = "smit campus"
-console.log(str.lastIndexOf("s"))
+// var str = "smit campus";
+// console.log(str.lastIndexOf("s"));
