@@ -1,0 +1,37 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    flex-wrap: wrap;
+    
+}
+
+
+#main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: khaki;
+    flex-wrap: wrap;
+
+    /* text-transform: capitalize; */
+    /* text-transform: capitalize; */
+} button {
+    padding: 10px;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 4px 5px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
