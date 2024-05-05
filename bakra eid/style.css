@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(https://cdn.vectorstock.com/i/500p/89/58/eid-al-adha-mubarak-background-design-vector-21558958.avif);
+    filter: brightness(50%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+.main {
+    text-align: center;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    padding: 20px;
+    border-radius: 10px;
+    color: rgb(119, 29, 29);
+    height: 80vh;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 165px;
+
+}
+
+.main h1 {
+    margin-top: 0;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .main {
+        font-size: 24px;
+        line-height: 95px;
+
+    }
+    .main h1 {
+
+line-height: 71px;
+
+    }
+
+    span{
+
+        padding-top: 150px;
+        line-height: 31px;
+
+
+    }
+}
