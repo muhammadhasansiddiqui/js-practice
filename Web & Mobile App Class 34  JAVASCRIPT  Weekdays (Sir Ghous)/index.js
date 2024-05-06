@@ -47,3 +47,10 @@
 // var arr = [];
 // console.log(arr.push(prompt("Enter your name")));
 // console.log(arr);
+
+
+// function myCar(start) {
+//     var carName = "Toyota"
+//     return carName
+// }
+// console.log(myCar());
