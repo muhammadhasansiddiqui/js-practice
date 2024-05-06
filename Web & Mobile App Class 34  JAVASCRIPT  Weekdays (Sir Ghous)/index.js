@@ -43,3 +43,7 @@
     
 // }
 // console.log(abc(5,5))
+
+// var arr = [];
+// console.log(arr.push(prompt("Enter your name")));
+// console.log(arr);
