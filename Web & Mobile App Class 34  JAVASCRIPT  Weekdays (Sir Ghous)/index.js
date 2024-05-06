@@ -38,3 +38,8 @@
 // var result = myFunc(6,4);
 // console.log(result);
 
+// function abc(a,b) {
+//     return (a*b)-5;
+    
+// }
+// console.log(abc(5,5))
