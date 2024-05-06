@@ -21,3 +21,11 @@
 
 
 // main();
+
+// function printName(yourName) {
+//     document.write("<p style='color:red;font-size:50px;font-family:arial;text-align:center;'>Hello " + yourName + "</p>");
+
+// }
+// var name = prompt("Enter your name");
+// name = name.toLowerCase().toUpperCase();
+// printName(name);
