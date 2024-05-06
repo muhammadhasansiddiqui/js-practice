@@ -29,3 +29,12 @@
 // var name = prompt("Enter your name");
 // name = name.toLowerCase().toUpperCase();
 // printName(name);
+
+// function myFunc(a , b) {
+//     return a + b;
+
+    
+// }
+// var result = myFunc(6,4);
+// console.log(result);
+
