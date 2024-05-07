@@ -48,3 +48,13 @@
 //     console.log("test 3");
 // }
 // console.log(abc());
+
+// function foo(a,b) {
+//     return a * b;
+    
+// }
+// console.log(foo(_ ,2));
+
+// 
+
+
