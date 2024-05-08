@@ -1,3 +1,6 @@
+// nUm = 1
+
+
 // var num = 10;
 
 // let x = 0;
@@ -10,3 +13,14 @@
 //     x = y;
 //     y = z;
 // }
+
+
+//NuM = 2   .Factorial Calculation: Write a function to calculate the factorial of a given number
+
+
+// var  num = prompt("Enter a number") 
+// var fact = 1;
+// for (let i = 1; i <= num; i++) {
+//     fact = fact * i;
+// }
+// console.log("Factorial of", num, "is", fact);
