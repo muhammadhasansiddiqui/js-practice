@@ -63,3 +63,59 @@
 
 // console.log("The longest word is " + longestWord);
 
+// num 6 Remove Duplicates: Write a function to remove duplicates from an array.
+
+// var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// var unique = [];
+// for (let i = 0; i < arr.length; i++) {
+//     if (unique.indexOf(arr[i]) === -1) {
+//         unique.push(arr[i]);
+//     }
+// }
+// console.log(unique);
+
+
+// num 7  Merge Arrays: Write a function to merge two sorted arrays into a single sorted array
+
+// var arr1 = [1, 2, 3, 4, 5];
+// var arr2 = [1,6, 7, 8, 9, 10];
+
+// var arr3 = arr1.concat(arr2);
+// arr3.sort(function (a, b) 
+// { return a - b });
+// arr3 = [...new Set(arr3)];
+
+// console.log(arr3);
+
+
+//  NUM 8 Find Prime Numbers: Write a function to find all prime numbers up to a given number n
+// var n = prompt("Enter a number");
+// for (let i = 2    ; i <= n; i++) {
+//     var isPrime = true;
+//     for (let j = 2; j < i; j++) {
+//         if (i % j === 0) {
+//             isPrime = false;
+//             break;
+//         }
+//     }
+//     if (isPrime) {
+//         console.log( "The prime number is " + i);
+//     }
+// }
+
+// NUM 9 = Caesar Cipher: Write a function to encrypt and decrypt a string using the Caesar Cipher
+//  algorithm
+
+var str = "HELLO WORLD ";
+var shift = 3;
+var encrypted = "";
+for (let i = 0; i < str.length; i++) {
+    var char = str.charCodeAt(i);
+    if (char >= 65 && char <= 90) {
+        char = (char - 65 + shift) % 26 + 65;
+    } else if (char >= 97 && char <= 122) {
+        char = (char - 97 + shift) % 26 + 97;
+    }
+    encrypted += String.fromCharCode(char);
+}
+console.log(encrypted);
