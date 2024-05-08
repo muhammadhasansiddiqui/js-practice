@@ -47,3 +47,19 @@
 // } else {
 //     console.log("Not Palindrome");
 // }
+
+
+// num 5 Find the Longest Word: Write a function to find the longest word in a given string
+
+// var str = prompt("Enter a Word");
+// str = str.toLocaleUpperCase(); 
+// var longestWord = "";
+// var words = str.split(" ");
+// for (let i = 0; i < words.length; i++) {
+//     if (words[i].length > longestWord.length) {
+//         longestWord = words[i];
+//     }
+// }
+
+// console.log("The longest word is " + longestWord);
+
