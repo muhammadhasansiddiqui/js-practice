@@ -24,3 +24,26 @@
 //     fact = fact * i;
 // }
 // console.log("Factorial of", num, "is", fact);
+
+
+// num = 3 Reverse a String: Write a function to reverse a string without using the built-in reverse() function
+
+// var str = "Hello World";
+// var rev = "";
+// for (let i = str.length - 1; i >= 0; i--) {
+//     rev += str[i];
+// }
+// console.log(rev);
+
+// num =  4  Palindrome Check: Write a function to check if a given string is a palindrome
+
+// var enterWord = prompt("Enter a word");
+// var reverseWord = "";
+// for (let i = enterWord.length - 1; i >= 0; i--) {
+//     reverseWord += enterWord[i];
+// }
+// if (enterWord === reverseWord) {
+//     console.log("Palindrome");
+// } else {
+//     console.log("Not Palindrome");
+// }
