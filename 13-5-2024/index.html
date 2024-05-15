@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat  App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- message box => height 90vh -->
+    <ul id="msgBox"></ul>
 
-    <div class="chat-container">
-        <div id="chat-window"></div>
-        <input type="text" id="message-input" placeholder="Type your message...">
-        <button onclick="sendMessage()">Send</button>
-    </div>
+      <!-- input for sending message -->
+      <input type="text" />
+      <!-- send message button -->
+      <button onclick="handleSend()">send</button>
+
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
