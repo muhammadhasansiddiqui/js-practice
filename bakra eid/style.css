@@ -13,6 +13,18 @@ body {
     align-items: center;
     color: white;
 }
+.one-t{
+
+padding-top: -2px !important;
+
+}
+.two-t
+
+{
+    padding-top:100 px !important;
+
+
+}
 
 
 .main {
@@ -21,10 +33,10 @@ body {
     padding: 20px;
     border-radius: 10px;
     color: rgb(119, 29, 29);
-    height: 80vh;
     font-weight: bold;
-    font-size: 45px;
-    line-height: 165px;
+    padding-bottom: 1px !important;
+    height: 99vh;
+    font-size: 35px;
 
 }
 
