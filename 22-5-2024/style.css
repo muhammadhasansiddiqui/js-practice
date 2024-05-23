@@ -1,0 +1,13 @@
+body{
+display: flex;
+justify-content: space-between;
+background: khaki;
+
+}
+
+ul p {
+
+text-decoration: none !important;
+
+
+}
