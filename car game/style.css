@@ -1,0 +1,112 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.road {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.car {
+    position: absolute;
+    bottom: 10%;
+    left: 8%;
+    transform: translateX(-50%);
+    width: 35%;
+}
+
+.light {
+    position: absolute;
+    top: 38%;
+    right: 5%;
+    width: 13%;
+    z-index: 0;
+}
+
+.control-btn {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 4;
+    margin: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    box-shadow: 2px 1px 2px 2px #AD5203;
+}
+
+.startbtn {
+    position: absolute;
+    bottom: 5%;
+    left: 40%;
+}
+
+#stopBtn {
+    background-color: black;
+    color: white !important;
+}
+
+@media (max-width: 768px) {
+    .car {
+        width: 50%;
+        /* Increase car size on smaller screens */
+        bottom: 15%;
+    }
+
+    .light {
+        top: 40%;
+        width: 15%;
+    }
+
+    .control-btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .startbtn {
+        left: 35%;
+    }
+}
+
+@media (max-width: 480px) {
+    .car {
+        width: 60%;
+        bottom: 20%;
+    }
+
+    .light {
+        top: 55%;
+        width: 27%;
+    }
+
+    .control-btn {
+        padding: 10px 25px;
+        font-size: 12px;
+    }
+
+    .startbtn {
+        left: 30%;
+    }
+}
