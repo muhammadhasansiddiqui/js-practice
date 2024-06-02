@@ -121,5 +121,10 @@
 
 
 
-    
+// console.log(document)
 
+// function removeEle() {
+//     var para = document.getElementById("para");
+//     para.remove();
+    
+// }
