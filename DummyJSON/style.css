@@ -1,0 +1,32 @@
+*{
+background: lightblue;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#products{
+
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+border: 10px solid khaki;
+font-weight: bolder;
+padding-top: 20px;
+
+
+}
+.box{
+padding: 10px;
+margin: 10px;
+    border: 00.1px solid gray;
+    border-radius: 4px;
+    box-shadow:0 0 11px #090909";
+}
+button{
+
+background-color: white;
+color: black;
+border: none;
+border-radius: 5px;
+
+}
