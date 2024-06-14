@@ -9,4 +9,4 @@
 //     console.log("This is not a palindrome");
 // }
 
-var ABC = "Hello world";
+// var ABC = "Hello world";
