@@ -125,3 +125,18 @@
 // var currentYear = currentDate.getFullYear();
 // var birthYear = currentYear - userAge;
 // console.log("Your birth year is: " + birthYear);
+
+
+// Assignment # 35-38
+// JAVASCRIPT
+
+// 1. Write a function that displays current date & time in your
+// browser.
+
+// var rightNow = new Date();
+// console.log("��� ~ rightNow:", rightNow);
+
+
+
+// 1. Create a signup form and display form data in your web
+// page on submission.
