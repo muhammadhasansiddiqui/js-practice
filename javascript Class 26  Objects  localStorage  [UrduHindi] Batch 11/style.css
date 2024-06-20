@@ -1,0 +1,16 @@
+#box-container{
+
+height: 100vh;
+
+width: 100vw;
+
+}
+
+.box{
+
+    border: 1px solid black;
+    width: 80%;
+    height: 50%;
+
+}
+
