@@ -32,7 +32,8 @@ padding: 30px;
 height: 90vh;
 background-color: #B1D0E6;
 border-radius: 0 13px 13px 13px;
-box-shadow:0 13px 11px #090909"
+box-shadow:0 13px 11px #090909";
+
 
     }
 
@@ -75,9 +76,14 @@ background-color: #B1D0E6;
 
     .login{
 
-background-color: #B1D0E6 !important;
+background-color: #569DD0 !important;
 color: white !important;
 border: none;
+padding: 10px;
+margin: 10px;
+width: 100px;
+font-weight: bold;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif!important;
 
 
     }
