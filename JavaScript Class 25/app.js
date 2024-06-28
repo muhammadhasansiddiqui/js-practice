@@ -21,3 +21,5 @@
 // obj2.detail.school = "siddiqui";
 // console.log("��� ~ obj:", obj);
 // console.log("��� ~ obj2:", obj2);
+
+
