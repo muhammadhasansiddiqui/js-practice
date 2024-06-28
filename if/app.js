@@ -131,7 +131,7 @@
 // console.log(student)
 
 
-var cities = ["Karachi", "Lahore", "Islamabad", "Faisalabad"];
-var newValue = cities.slice (0);
-console.log(newValue)
-console.log(cities)
+// var cities = ["Karachi", "Lahore", "Islamabad", "Faisalabad"];
+// var newValue = cities.slice (0);
+// console.log(newValue)
+// console.log(cities)
