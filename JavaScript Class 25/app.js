@@ -40,3 +40,15 @@
 
 // console.log("🚀 ~ obj:", firstName, lastName, school);
 
+// let arr =["smit","saylani","it" ]
+// let [a,b,c] = arr;
+// console.log("🚀 ~ arr:", a,b,c);
+
+
+// for each 
+
+// let arr = ["hasan","siddiqui"]
+
+// arr.forEach(function (hasan,h){
+// console.log("🚀 ~ v:", hasan,h);
+// })
