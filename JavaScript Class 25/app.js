@@ -52,3 +52,81 @@
 // arr.forEach(function (hasan,h){
 // console.log("🚀 ~ v:", hasan,h);
 // })
+
+//  let arr = ["hasan","siddiqui"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// arr.sort (function (a,b){
+//     if (a>b){
+//         return 1
+//     }else if (a<b){
+//         return -1
+//     }else{
+//         return 0
+//     }
+// })
+
+// console.log("🚀 ~ arr:", arr);
+
+
+
+
+
+
+
+// var output=arr.concat(smit)
+// console.log("🚀 ~ arr:", arr);
+
+//  var output =arr.some(function(v, i){
+//     console.log("��� ~ v:", v, i);
+//     return v === "hasan"
+
+//  })
+//  console.log("🚀 ~ output ~ output:", output);
+
+//  var output =arr.every(function(v, i){
+//     // console.log("��� ~ v:", v, i);
+//     return v === 'hasan'
+
+//  })
+//  console.log("🚀 ~ output ~ output:", output);
+
+
+
+// var  output = arr.filter(function (v,i) {
+//     console.log("��� ~ v:", v, i);
+//     return v === "hasan"
+    
+// })
+// console.log("🚀 ~ output ~ output:", output);
+
+
+
+
+
+
+//  var output = arr.map(function(v,i){
+//     console.log("��� ~ v:", v, i);
+//     return `${v} smit`
+//  })
+//  console.log("🚀 ~ output ~ output:", output);
