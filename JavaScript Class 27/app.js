@@ -18,3 +18,8 @@
 // let age =+prompt("enter your age");
 // let isAdult = age >= 18 ? "Are You Eligibale" : "Are You NoT Eligibale";
 // console.log("🚀 ~ isAdult:", isAdult);
+
+// let age = 20;
+
+// let result = age >= 19 ?"enter your Cnic ":"ENTER YOUR B-FORM"
+// console.log("🚀 ~ result:", result);
