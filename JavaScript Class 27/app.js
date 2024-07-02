@@ -23,3 +23,8 @@
 
 // let result = age >= 19 ?"enter your Cnic ":"ENTER YOUR B-FORM"
 // console.log("🚀 ~ result:", result);
+
+
+// let key="hello world"
+// console.log("🚀 ~ key:", key);
+// console.log("🚀 ~ key:", key);
