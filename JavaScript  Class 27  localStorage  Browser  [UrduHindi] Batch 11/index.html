@@ -3,19 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Login/Signup</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<link rel="stylesheet" href="style.css">
+
   </head>
   <body>
-    <h1>resgistor</h1>
+    <center>
+    <div class="main">
 
-    <input type="text" placeholder="enter you name" id="r-name" /><br />
-    <input type="email" placeholder="email" id="r-email" /><br />
-    <input type="password" placeholder="password" id="r-password" />
-
-    <br />
-    <button onclick="register()">register</button>
-
-    <h1>login</h1>
+    <h1>Login</h1>
 
     <input type="email" placeholder="email" id="l-email" />
     <br />
@@ -23,7 +22,11 @@
 
     <br />
     <button onclick="login()">login</button>
-
+    <p class="micro">If you are not registered, please <a href="register.html">register here</a>.</p>
+</div>
+</center>
     <script src="app.js"></script>
   </body>
 </html>
+
+
