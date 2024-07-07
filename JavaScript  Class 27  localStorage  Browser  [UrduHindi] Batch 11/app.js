@@ -66,7 +66,7 @@ function login() {
 
   if (invaild) {
     Swal.fire("User login successfully");
-    window.location.href = "welcome.html";
+    window.location.href = "kanban.html";
 
     console.log("user login success");
   } else {
@@ -77,4 +77,5 @@ function login() {
 }
 
 function logout(){
+  console.log("logout");
   window.location.href = "index.html";}

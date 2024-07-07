@@ -1,0 +1,180 @@
+* {
+    background-color: black;
+}
+.bg-body-tertiary{
+color: white !important;
+background-color: black !important;
+
+}
+.nav-link {
+    color: wheat !important;
+}
+
+.navbar-brand {
+    color: wheat !important;
+}
+
+.navbar-toggler-icon{
+    background-color: #E9BC6A !important;
+    border-radius: 5px;
+    
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+#todo-form {
+    padding: 32px 32px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#todo-form input {
+    padding: 12px;
+    margin-right: 12px;
+    width: 225px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    background:#E9BC6A ;
+    font-size: 14px;
+    outline: none;
+    color: black !important;
+}
+input[type="text"]::placeholder {
+    color: rgba(0, 0, 0, 0.643);
+    font-weight:bold;
+    font-style: italic;
+}
+
+#todo-form button {
+    padding: 12px 30px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    background:rgb(233, 188, 106);
+    color: black !important;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+board button :hover{
+    
+    background-color: red !important;
+    
+}
+
+.navbar-brand{
+    
+    
+    font-family: "Playwrite GB S", cursive !important;
+    font-optical-sizing: auto !important;
+    font-weight: weight !important;
+    font-style: normal !important;
+    font-size: 30px !important;
+    
+    
+}
+
+
+
+/* ---- BOARD ---- */
+
+.lanes {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+    padding: 24px 32px;
+    height: 100%;
+}
+
+.heading {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.swim-lane {
+    display: flex;
+    justify-content: space-between !important;
+    flex-direction: column;
+    gap: 10px;
+    /* background: #141416; */
+    
+    
+    font-size: larger !important;
+    box-shadow: 2px 2px 14px 2px white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 30%;
+    min-height: 120px;
+    color:yellow!important;
+}
+
+.task {
+    background: #1A1A1C;
+    box-shadow: 4px 5px 15px 0px #B96C2F!important;
+
+    color: darkgoldenrod !important;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 17px;
+    cursor: move;
+    min-height: 40px; /* Adjust the minimum height as needed */
+}
+
+.is-dragging {
+    scale: 1.02;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    background: rgb(124, 122, 122);
+    color: rgb(70, 17, 17);
+}
+
+@media only screen and (max-width: 768px) {
+    #todo-form input {
+        margin-bottom: 4px;
+    }
+
+    .lanes {
+        padding: 24px 8px;
+        flex-direction: column;
+    }
+
+    .swim-lane {
+        width: calc(100% - 32px);
+    }
+}
+
+*{
+    
+    /* color: #B96C2F !important; */
+}
+
+
+    .btn {
+        color: wheat !important;
+        margin: 10px !important;
+        box-shadow: #B96C2F 1px 0px 10px 2px !important;
+        border: none !important;
+        
+    }
+
+    .btn :hover {
+
+        background-color: #E9BC6A !important;
+        box-shadow: red 1px 0px 10px 2px !important;
+
+
+    }
