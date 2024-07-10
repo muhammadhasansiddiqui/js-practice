@@ -50,9 +50,55 @@
 //         name: "civic",
 //         models: ["Accord", "Civic", "Insight"],
 //         color : "red"
-    
+
 //     },
 //   },
 //   };
 
 // console.log("🚀 ~ company:", cars[company][model]);
+
+// let obj = {
+
+//     name: "ahmed" ,
+//     age: 20 ,
+//     city: "karachi" ,
+//     education: "matric",
+//     objMethod : function (){
+//         return `<h1> MR ${this.name}<h1/>`
+// }}
+// innerHTML = obj.objMethod()
+//         console.log("🚀 ~ ans:", obj.objMethod());
+
+// function Students(name, email, phone, city) {
+//   this.name = name;
+//   this.email = email;
+//   this.phone = phone;
+//   this.city = city;
+// }
+
+// let studentArr = [
+//   new Students("Ahemd", "XXXXXXXXXXXXXXX", 1234567890, "Karachi"),
+//   new Students("Ahemd", "XXXXXXXXXXXXXXX", 1234567890, "Karachi"),
+//   new Students("Ahemd", "XXXXXXXXXXXXXXX", 1234567890, "Karachi"),
+//   new Students("Ahemd", "XXXXXXXXXXXXXXX", 1234567890, "Karachi"),
+//   new Students("Ahemd", "XXXXXXXXXXXXXXX", 1234567890, "Karachi"),
+//   new Students("Ahemd", "XXXXXXXXXXXXXXX", 1234567890, "Karachi"),
+//   new Students("Ahemd", "XXXXXXXXXXXXXXX", 1234567890, "Karachi"),
+// ];
+// console.log("🚀 ~ studentArr:", studentArr);
+
+// let company = prompt("company");
+// let model = prompt("model");
+
+// let car ={
+// honda: {
+//     civic :{
+//         name: "civic",
+//         models: ["Accord", "Civic", "Insight"],
+//         color : "red"
+
+//     },
+//   },
+// };
+
+// console.log("��� ~ company:", car[company][model]);
