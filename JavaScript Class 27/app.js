@@ -28,3 +28,10 @@
 // let key="hello world"
 // console.log("🚀 ~ key:", key);
 // console.log("🚀 ~ key:", key);
+
+// Ternary Operator
+
+
+// let age = +prompt("enter your age");
+// let isAdult = age >= 18 ? "Are You Eligibale" : "Are You NoT Eligibale";
+// console.log("🚀 ~ isAdult:", isAdult);
