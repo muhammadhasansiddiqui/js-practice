@@ -102,3 +102,16 @@
 // };
 
 // console.log("��� ~ company:", car[company][model]);
+
+// let civic = {
+//              name: "civic",
+//              models: ["Accord", "Civic", "Insight"],
+//              color : "red",
+    
+//       }
+
+//       for (var key in civic){
+//         console.log("��� ~ key:", key)
+//         console.log("��� ~ civic[key]:", civic[key])
+//         document.write(key + " : "+civic[key] + "<br>")
+//       }
