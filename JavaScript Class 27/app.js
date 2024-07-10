@@ -35,3 +35,18 @@
 // let age = +prompt("enter your age");
 // let isAdult = age >= 18 ? "Are You Eligibale" : "Are You NoT Eligibale";
 // console.log("🚀 ~ isAdult:", isAdult);
+
+// Closure
+
+
+// function outerFunction(){
+//     let FirstName = "hasan";
+    
+//     function innerFunction(){
+//         console.log("🚀 ~ outerFunction ~ FirstName:", FirstName);
+      
+      
+//     }
+//      innerFunction();
+// }
+// outerFunction();
