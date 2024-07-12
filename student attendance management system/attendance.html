@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Management System</title>
+<link rel="stylesheet" href="attendance.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Attendance Management System</h1>
+
+    <!-- Form to add a new student -->
+    <form id="studentForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="rollNumber">Roll Number:</label>
+        <input type="number" id="rollNumber" name="rollNumber" required>
+        <br>
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="present">Present</option>
+            <option value="absent">Absent</option>
+        </select>
+        <br>
+        <button type="submit">Add Student</button>
+    </form>
+
+    <!-- File input for uploading Excel files -->
+    <input type="file" id="fileInput" accept=".xlsx, .xls">
+    <br><br>
+
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll Number</th>
+                <th>Date & Time</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Student data will be inserted here -->
+        </tbody>
+    </table>
+
+    <!-- Include SheetJS library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="attendance.js"></script>
+</body>
+</html>

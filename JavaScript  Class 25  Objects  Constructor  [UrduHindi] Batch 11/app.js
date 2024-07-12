@@ -115,3 +115,6 @@
 //         console.log("��� ~ civic[key]:", civic[key])
 //         document.write(key + " : "+civic[key] + "<br>")
 //       }
+
+
+
