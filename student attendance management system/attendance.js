@@ -1,81 +1,168 @@
-const students = [];
+const add = () => {
+  const newSTUname = document.getElementById("newSTUname").value.trim();
+  const NEWidnum = parseInt(document.getElementById("NEWidnum").value.trim()); // Parse ID as integer
+  let studentData = JSON.parse(localStorage.getItem("studentData") || "{}");
 
-// Function to display students in the table
-function displayStudents() {
-    const tableBody = document.getElementById('studentTable').getElementsByTagName('tbody')[0];
-    tableBody.innerHTML = ''; // Clear existing rows
+  if (!newSTUname || !NEWidnum ) {
+    alert("Please enter both student name and student ID number.");
+    return;
+  }
 
-    students.forEach(student => {
-        const row = tableBody.insertRow();
+  if (studentData[NEWidnum]) {
+    alert("A student with this ID already exists.");
+  } else {
+    studentData[NEWidnum] = { name: newSTUname, attendance: [] };
+    localStorage.setItem("studentData", JSON.stringify(studentData));
+    alert("Student added successfully!");
+  }
 
-        const nameCell = row.insertCell(0);
-        const rollNumberCell = row.insertCell(1);
-        const dateCell = row.insertCell(2);
-        const statusCell = row.insertCell(3);
+  // Clear input fields
+  document.getElementById("newSTUname").value = "";
+  document.getElementById("NEWidnum").value = "";
+};
 
-        nameCell.textContent = student.name;
-        rollNumberCell.textContent = student.rollNumber;
-        dateCell.textContent = student.date;
-        statusCell.textContent = student.isPresent;
+const enter = (event) => {
+  // event.preventDefault();
+  console.log("Enter function called."); // Check if function is called
+
+  const idnum = parseInt(document.getElementById("idnum").value); // Parse ID as integer
+  console.log("ID Number:", idnum); // Check if ID number is correctly parsed
+
+  let studentData = JSON.parse(localStorage.getItem("studentData") || "{}");
+  console.log("Student Data:", studentData); // Check if studentData is correctly retrieved
+
+  if (studentData[idnum]) {
+    const attendance = studentData[idnum].attendance;
+    const currentDate = new Date();
+    const formattedDate = currentDate.toLocaleDateString();
+    const formattedTime = currentDate.toLocaleTimeString();
+
+    const attendanceRecord = `${formattedDate} ${formattedTime}`;
+
+    if (!attendance.includes(attendanceRecord)) {
+      attendance.push(attendanceRecord);
+      localStorage.setItem("studentData", JSON.stringify(studentData));
+      alert("Attendance marked successfully!");
+    } else {
+      alert("Attendance already marked for today.");
+    }
+  } else {
+    alert("No student found with this ID number.");
+  }
+  document.getElementById("idnum").value = ""; // Clear input field
+};
+
+const attendanceHIS = () => {
+  const attendanceTableBody = document.querySelector("#attendanceTable tbody");
+  console.log("🚀 ~ attendanceHIS ~ attendanceTableBody:", attendanceTableBody);
+
+  attendanceTableBody.innerHTML = "";
+  let studentData = JSON.parse(localStorage.getItem("studentData") || "{}");
+  for (const idnum in studentData) {
+    const student = studentData[idnum];
+    student.attendance.forEach((record) => {
+      const dateTime = new Date(record);
+      const formattedDate = dateTime.toLocaleDateString();
+      const formattedTime = dateTime.toLocaleTimeString();
+      const row = document.createElement("tr");
+      row.innerHTML = `<td>${student.name}</td><td>${idnum}</td><td>${formattedDate}</td><td>${formattedTime}</td>`;
+      attendanceTableBody.appendChild(row);
     });
-}
+  }
+  if (attendanceTableBody.innerHTML === "") {
+    attendanceTableBody.innerHTML =
+      "<tr><td colspan='4'>No attendance records found.</td></tr>";
+  } else {
+    alert("Attendance history loaded successfully!");
+  }
+};
 
-// Function to add a new student
-function addStudent(event) {
-    event.preventDefault(); // Prevent form submission
+// student det
 
-    const name = document.getElementById('name').value;
-    const rollNumber = parseInt(document.getElementById('rollNumber').value, 10);
-    const status = document.getElementById('status').value;
+document.addEventListener('DOMContentLoaded', loadStudentDetails);
 
-    const student = {
-        name,
-        rollNumber,
-        date: new Date().toLocaleString(),
-        isPresent: status === 'present' ? 'aya hai' : 'nahi aya'
+    function loadStudentDetails() {
+        const studentTableBody = document.querySelector("#studentTable tbody");
+        studentTableBody.innerHTML = "";
+        let studentData = JSON.parse(localStorage.getItem("studentData") || "{}");
+        for (const idnum in studentData) {
+            const student = studentData[idnum];
+            const row = document.createElement("tr");
+            row.innerHTML = `<td>${student.name}</td><td>${idnum}</td>`;
+            studentTableBody.appendChild(row);
+        }
+        if (studentTableBody.innerHTML === "") {
+            studentTableBody.innerHTML = "<tr><td colspan='2'>No students found.</td></tr>";
+        }
+    }
+
+
+    // file
+    const handleFile = () => {
+      const fileInput = document.getElementById("fileInput");
+      const file = fileInput.files[0];
+    
+      if (!file) {
+        alert("Please select a file.");
+        return;
+      }
+    
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const data = event.target.result;
+        if (file.name.endsWith(".csv")) {
+          processData(data);
+          alert("File uploaded successfully!");
+        } else if (file.name.endsWith(".xlsx") || file.name.endsWith(".xls")) {
+          const dataArrayBuffer = new Uint8Array(event.target.result);
+          const workbook = XLSX.read(dataArrayBuffer, { type: "array" });
+          const sheetName = workbook.SheetNames[0];
+          const sheet = workbook.Sheets[sheetName];
+          const csvData = XLSX.utils.sheet_to_csv(sheet);
+          processData(csvData);
+          alert("File uploaded successfully!");
+        } else {
+          alert("Unsupported file format. Please upload a CSV, XLSX, or XLS file.");
+        }
+      };
+    
+      if (file.name.endsWith(".csv")) {
+        reader.readAsText(file);
+        alert("File uploaded successfully!");
+      } else if (file.name.endsWith(".xlsx") || file.name.endsWith(".xls")) {
+        reader.readAsArrayBuffer(file);
+        alert("File uploaded successfully!");
+      } else {
+        alert("Unsupported file format. Please upload a CSV, XLSX, or XLS file.");
+      }
     };
-
-    students.push(student);
-    displayStudents();
-
-    // Clear the form
-    document.getElementById('studentForm').reset();
-}
-
-// Function to handle file upload
-function handleFile(event) {
-    const file = event.target.files[0];
-    const reader = new FileReader();
-    reader.onload = function(e) {
-        const data = new Uint8Array(e.target.result);
-        const workbook = XLSX.read(data, { type: 'array' });
-        const sheetName = workbook.SheetNames[0];
-        const worksheet = workbook.Sheets[sheetName];
-        const jsonData = XLSX.utils.sheet_to_json(worksheet);
-
-        jsonData.forEach(row => {
-            const student = {
-                name: row.Name,
-                rollNumber: parseInt(row.RollNumber, 10),
-                date: new Date().toLocaleString(),
-                isPresent: row.Status === 'present' ? 'aya hai' : 'nahi aya'
-            };
+    
+    const processData = (data) => {
+      let students = [];
+      const rows = data.split("\n");
+      rows.forEach((row, index) => {
+        if (index > 0 && row.trim() !== "") {  // Skip header row and empty rows
+          const columns = row.split(",");
+          const student = {
+            name: columns[0].trim(),
+            id: parseInt(columns[1].trim(), 10)
+          };
+          if (student.name && !isNaN(student.id)) {  // Validate data
             students.push(student);
-        });
-
-        displayStudents();
+            alert("Student added successfully!");
+          }
+        }
+      });
+    
+      if (students.length > 0) {
+        addStudents(students)
+        alert ("Students added successfully!Please refresh the page to see the updated list. ");
+      } else {
+        alert("No valid student data found in the file.");
+      }
     };
-    reader.readAsArrayBuffer(file);
-}
 
-// Event listener for form submission
-document.getElementById('studentForm').addEventListener('submit', addStudent);
-
-// Event listener for file input
-document.getElementById('fileInput').addEventListener('change', handleFile);
-
-// Initial call to display students
-displayStudents();
+    
 
 
 
@@ -89,91 +176,15 @@ displayStudents();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// // Student Attendance Management System
-
-// const studentName = prompt("Enter your name");
-
-// // Parse the input string as a base 10 (decimal) number
-// const studentRoll = parseInt(prompt("Enter your roll number"), 10);
-
-// const studentStatus = prompt("Enter your status (present/absent)");
-// const studentDate = new Date();
-
-// const formattedDate = studentDate.toLocaleString();
-
-// let studentPresent = false;
-// if (studentStatus.toLowerCase() === "present") {
-//     studentPresent = "aya hai";
-// } else {
-//     studentPresent = "nahi aya";
-// }
-
-// const student = {
-//     name: studentName,
-//     rollNumber: studentRoll,
-//     date: formattedDate,
-//     isPresent: studentPresent
-// };
-
-// const students = [];
-// students.push(student);
-
-// const attendance = [];
-// attendance.push(students);
-
-// const displayedStudent = attendance[0][0];
-
-// document.write(`Name: ${displayedStudent.name}<br>`);
-// document.write(`Roll Number: ${displayedStudent.rollNumber}<br>`);
-// document.write(`Date & Time: ${displayedStudent.date}<br>`);
-// document.write(`Status: ${displayedStudent.isPresent}<br>`);
-
-
-
-
-
-
-
-
-
-
-
-
-// let rollNUM = parseInt(prompt("Enter your roll number"), 10);
-
-// let student = {
-//     name: "John Doe",
-//     rollNumber: rollNUM,
-//     date: new Date(),
-//     isPresent: false
-// };
-
-// if (rollNUM === 1) {
-//     student.isPresent = true;
-// }
-
-// let students = [];
-// students.push(student);
-
-// let attendance = [];
-// attendance.push(students);
-
-// // Access the student object correctly and display the details
-// let displayedStudent = attendance[0][0];
-
-// document.write(`Name: ${displayedStudent.name}<br>`);
-// document.write(`Roll Number: ${displayedStudent.rollNumber}<br>`);
-// document.write(`Date: ${displayedStudent.date}<br>`);
-// document.write(`Is Present: ${displayedStudent.isPresent}<br>`);
-
+      const addStudents = (students) => {
+        let studentData = JSON.parse(localStorage.getItem("studentData") || "{}");
+        students.forEach(student => {
+          const idnum = student.id;
+          if (!studentData[idnum]) {
+            studentData[idnum] = { name: student.name, attendance: [] };
+          }
+        });
+        localStorage.setItem("studentData", JSON.stringify(studentData));
+        alert("Students added successfully!");
+      };
+      

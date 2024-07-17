@@ -31,7 +31,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="stuFILE.html" disable=true >Add Student File</a>
+                <a class="nav-link active" aria-current="page" href="stuFILE.html">Add Student File</a>
               </li>
             </ul>
           </div>
@@ -40,8 +40,10 @@
 </div>
 
 <div class="main-div">
-    <input type="text" placeholder="Enter Student ID Number" id="idnum" required>
-    <button onclick="enter()">Mark Attendance</button>
+    
+  <input type="file" id="fileInput" accept=".csv,.xlsx,.xls">
+    <button onclick="handleFile()">Upload File</button>
+
 </div>
 
 <script src="attendance.js"></script>
