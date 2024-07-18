@@ -3,7 +3,7 @@ const add = () => {
   const NEWidnum = parseInt(document.getElementById("NEWidnum").value.trim()); // Parse ID as integer
   let studentData = JSON.parse(localStorage.getItem("studentData") || "{}");
 
-  if (!newSTUname || !NEWidnum ) {
+  if (!newSTUname || !NEWidnum) {
     alert("Please enter both student name and student ID number.");
     return;
   }
@@ -79,112 +79,101 @@ const attendanceHIS = () => {
 
 // student det
 
-document.addEventListener('DOMContentLoaded', loadStudentDetails);
+document.addEventListener("DOMContentLoaded", loadStudentDetails);
 
-    function loadStudentDetails() {
-        const studentTableBody = document.querySelector("#studentTable tbody");
-        studentTableBody.innerHTML = "";
-        let studentData = JSON.parse(localStorage.getItem("studentData") || "{}");
-        for (const idnum in studentData) {
-            const student = studentData[idnum];
-            const row = document.createElement("tr");
-            row.innerHTML = `<td>${student.name}</td><td>${idnum}</td>`;
-            studentTableBody.appendChild(row);
-        }
-        if (studentTableBody.innerHTML === "") {
-            studentTableBody.innerHTML = "<tr><td colspan='2'>No students found.</td></tr>";
-        }
+function loadStudentDetails() {
+  const studentTableBody = document.querySelector("#studentTable tbody");
+  studentTableBody.innerHTML = "";
+  let studentData = JSON.parse(localStorage.getItem("studentData") || "{}");
+  for (const idnum in studentData) {
+    const student = studentData[idnum];
+    const row = document.createElement("tr");
+    row.innerHTML = `<td>${student.name}</td><td>${idnum}</td>`;
+    studentTableBody.appendChild(row);
+  }
+  if (studentTableBody.innerHTML === "") {
+    studentTableBody.innerHTML =
+      "<tr><td colspan='2'>No students found.</td></tr>";
+  }
+}
+
+// file
+const handleFile = () => {
+  const fileInput = document.getElementById("fileInput");
+  const file = fileInput.files[0];
+
+  if (!file) {
+    alert("Please select a file.");
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = function (event) {
+    const data = event.target.result;
+    if (file.name.endsWith(".csv")) {
+      processData(data);
+      alert("File uploaded successfully!");
+    } else if (file.name.endsWith(".xlsx") || file.name.endsWith(".xls")) {
+      const dataArrayBuffer = new Uint8Array(event.target.result);
+      const workbook = XLSX.read(dataArrayBuffer, { type: "array" });
+      const sheetName = workbook.SheetNames[0];
+      const sheet = workbook.Sheets[sheetName];
+      const csvData = XLSX.utils.sheet_to_csv(sheet);
+      processData(csvData);
+      alert("File uploaded successfully!");
+    } else {
+      alert("Unsupported file format. Please upload a CSV, XLSX, or XLS file.");
     }
+  };
 
+  if (file.name.endsWith(".csv")) {
+    reader.readAsText(file);
+    alert("File uploaded successfully!");
+  } else if (file.name.endsWith(".xlsx") || file.name.endsWith(".xls")) {
+    reader.readAsArrayBuffer(file);
+    alert("File uploaded successfully!");
+  } else {
+    alert("Unsupported file format. Please upload a CSV, XLSX, or XLS file.");
+  }
+};
 
-    // file
-    const handleFile = () => {
-      const fileInput = document.getElementById("fileInput");
-      const file = fileInput.files[0];
-    
-      if (!file) {
-        alert("Please select a file.");
-        return;
-      }
-    
-      const reader = new FileReader();
-      reader.onload = function(event) {
-        const data = event.target.result;
-        if (file.name.endsWith(".csv")) {
-          processData(data);
-          alert("File uploaded successfully!");
-        } else if (file.name.endsWith(".xlsx") || file.name.endsWith(".xls")) {
-          const dataArrayBuffer = new Uint8Array(event.target.result);
-          const workbook = XLSX.read(dataArrayBuffer, { type: "array" });
-          const sheetName = workbook.SheetNames[0];
-          const sheet = workbook.Sheets[sheetName];
-          const csvData = XLSX.utils.sheet_to_csv(sheet);
-          processData(csvData);
-          alert("File uploaded successfully!");
-        } else {
-          alert("Unsupported file format. Please upload a CSV, XLSX, or XLS file.");
-        }
+const processData = (data) => {
+  let students = [];
+  const rows = data.split("\n");
+  rows.forEach((row, index) => {
+    if (index > 0 && row.trim() !== "") {
+      // Skip header row and empty rows
+      const columns = row.split(",");
+      const student = {
+        name: columns[0].trim(),
+        id: parseInt(columns[1].trim(), 10),
       };
-    
-      if (file.name.endsWith(".csv")) {
-        reader.readAsText(file);
-        alert("File uploaded successfully!");
-      } else if (file.name.endsWith(".xlsx") || file.name.endsWith(".xls")) {
-        reader.readAsArrayBuffer(file);
-        alert("File uploaded successfully!");
-      } else {
-        alert("Unsupported file format. Please upload a CSV, XLSX, or XLS file.");
+      if (student.name && !isNaN(student.id)) {
+        // Validate data
+        students.push(student);
+        alert("Student added successfully!");
       }
-    };
-    
-    const processData = (data) => {
-      let students = [];
-      const rows = data.split("\n");
-      rows.forEach((row, index) => {
-        if (index > 0 && row.trim() !== "") {  // Skip header row and empty rows
-          const columns = row.split(",");
-          const student = {
-            name: columns[0].trim(),
-            id: parseInt(columns[1].trim(), 10)
-          };
-          if (student.name && !isNaN(student.id)) {  // Validate data
-            students.push(student);
-            alert("Student added successfully!");
-          }
-        }
-      });
-    
-      if (students.length > 0) {
-        addStudents(students)
-        alert ("Students added successfully!Please refresh the page to see the updated list. ");
-      } else {
-        alert("No valid student data found in the file.");
-      }
-    };
+    }
+  });
 
-    
+  if (students.length > 0) {
+    addStudents(students);
+    alert(
+      "Students added successfully!Please refresh the page to see the updated list. "
+    );
+  } else {
+    alert("No valid student data found in the file.");
+  }
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-      const addStudents = (students) => {
-        let studentData = JSON.parse(localStorage.getItem("studentData") || "{}");
-        students.forEach(student => {
-          const idnum = student.id;
-          if (!studentData[idnum]) {
-            studentData[idnum] = { name: student.name, attendance: [] };
-          }
-        });
-        localStorage.setItem("studentData", JSON.stringify(studentData));
-        alert("Students added successfully!");
-      };
-      
+const addStudents = (students) => {
+  let studentData = JSON.parse(localStorage.getItem("studentData") || "{}");
+  students.forEach((student) => {
+    const idnum = student.id;
+    if (!studentData[idnum]) {
+      studentData[idnum] = { name: student.name, attendance: [] };
+    }
+  });
+  localStorage.setItem("studentData", JSON.stringify(studentData));
+  alert("Students added successfully!");
+};
