@@ -58,9 +58,14 @@
 // console.log("🚀 ~ isAdult:", isAdult);
 
 
+// let abc = () => {
+//   alert("hello world i am a abc");
+// };
 
 
-
+// export {
+//   abc
+// }
 
 
 
