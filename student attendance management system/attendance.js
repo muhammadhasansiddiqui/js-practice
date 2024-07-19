@@ -4,16 +4,37 @@ const add = () => {
   let studentData = JSON.parse(localStorage.getItem("studentData") || "{}");
 
   if (!newSTUname || !NEWidnum) {
-    alert("Please enter both student name and student ID number.");
+    Swal.fire({
+      icon: 'warning',
+      title: 'Warning',
+      html: '<span class="swal-custom-text">Please enter both student name and student ID number.</span>',
+      customClass: {
+        htmlContainer: 'swal-custom-html',
+      }
+    });
     return;
   }
 
   if (studentData[NEWidnum]) {
-    alert("A student with this ID already exists.");
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      html: '<span class="swal-custom-text">A student with this ID already exists.</span>',
+      customClass: {
+        htmlContainer: 'swal-custom-html',
+      }
+    });
   } else {
     studentData[NEWidnum] = { name: newSTUname, attendance: [] };
     localStorage.setItem("studentData", JSON.stringify(studentData));
-    alert("Student added successfully!");
+    Swal.fire({
+      icon: 'success',
+      title: 'Success',
+      html: '<span class="swal-custom-text">Student added successfully!</span>',
+      customClass: {
+        htmlContainer: 'swal-custom-html',
+      }
+    });
   }
 
   // Clear input fields
@@ -22,32 +43,53 @@ const add = () => {
 };
 
 const enter = (event) => {
-  // event.preventDefault();
-  console.log("Enter function called."); // Check if function is called
+  console.log("Enter function called.");
 
   const idnum = parseInt(document.getElementById("idnum").value); // Parse ID as integer
-  console.log("ID Number:", idnum); // Check if ID number is correctly parsed
+  console.log("ID Number:", idnum);
 
   let studentData = JSON.parse(localStorage.getItem("studentData") || "{}");
-  console.log("Student Data:", studentData); // Check if studentData is correctly retrieved
+  console.log("Student Data:", studentData);
 
   if (studentData[idnum]) {
     const attendance = studentData[idnum].attendance;
     const currentDate = new Date();
-    const formattedDate = currentDate.toLocaleDateString();
+    const formattedDate = currentDate.toISOString().split('T')[0]; // Format date as YYYY-MM-DD
     const formattedTime = currentDate.toLocaleTimeString();
 
     const attendanceRecord = `${formattedDate} ${formattedTime}`;
+    const attendanceDates = attendance.map(record => record.split(' ')[0]); // Extract dates from records
 
-    if (!attendance.includes(attendanceRecord)) {
+    if (attendanceDates.includes(formattedDate)) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Warning',
+        html: '<span class="swal-custom-text">Attendance already marked for today.</span>',
+        customClass: {
+          htmlContainer: 'swal-custom-html',
+        }
+      });
+    } else {
       attendance.push(attendanceRecord);
       localStorage.setItem("studentData", JSON.stringify(studentData));
-      alert("Attendance marked successfully!");
-    } else {
-      alert("Attendance already marked for today.");
+      Swal.fire({
+        icon: 'success',
+        title: 'Success',
+        html: '<span class="swal-custom-text">Attendance marked successfully!</span>',
+        customClass: {
+          htmlContainer: 'swal-custom-html',
+        }
+      });
     }
   } else {
-    alert("No student found with this ID number.");
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      html: '<span class="swal-custom-text">No student found with this ID number.</span>',
+      customClass: {
+        htmlContainer: 'swal-custom-html',
+      }
+    });
   }
   document.getElementById("idnum").value = ""; // Clear input field
 };
@@ -73,11 +115,16 @@ const attendanceHIS = () => {
     attendanceTableBody.innerHTML =
       "<tr><td colspan='4'>No attendance records found.</td></tr>";
   } else {
-    alert("Attendance history loaded successfully!");
+    Swal.fire({
+      icon: 'success',
+      title: 'Success',
+      html: '<span class="swal-custom-text">Attendance history loaded successfully!</span>',
+      customClass: {
+        htmlContainer: 'swal-custom-html',
+      }
+    });
   }
 };
-
-// student det
 
 document.addEventListener("DOMContentLoaded", loadStudentDetails);
 
@@ -97,13 +144,19 @@ function loadStudentDetails() {
   }
 }
 
-// file
 const handleFile = () => {
   const fileInput = document.getElementById("fileInput");
   const file = fileInput.files[0];
 
   if (!file) {
-    alert("Please select a file.");
+    Swal.fire({
+      icon: 'warning',
+      title: 'Warning',
+      html: '<span class="swal-custom-text">Please select a file.</span>',
+      customClass: {
+        htmlContainer: 'swal-custom-html',
+      }
+    });
     return;
   }
 
@@ -112,7 +165,14 @@ const handleFile = () => {
     const data = event.target.result;
     if (file.name.endsWith(".csv")) {
       processData(data);
-      alert("File uploaded successfully!");
+      Swal.fire({
+        icon: 'success',
+        title: 'Success',
+        html: '<span class="swal-custom-text">File uploaded successfully!</span>',
+        customClass: {
+          htmlContainer: 'swal-custom-html',
+        }
+      });
     } else if (file.name.endsWith(".xlsx") || file.name.endsWith(".xls")) {
       const dataArrayBuffer = new Uint8Array(event.target.result);
       const workbook = XLSX.read(dataArrayBuffer, { type: "array" });
@@ -120,20 +180,39 @@ const handleFile = () => {
       const sheet = workbook.Sheets[sheetName];
       const csvData = XLSX.utils.sheet_to_csv(sheet);
       processData(csvData);
-      alert("File uploaded successfully!");
+      Swal.fire({
+        icon: 'success',
+        title: 'Success',
+        html: '<span class="swal-custom-text">File uploaded successfully!</span>',
+        customClass: {
+          htmlContainer: 'swal-custom-html',
+        }
+      });
     } else {
-      alert("Unsupported file format. Please upload a CSV, XLSX, or XLS file.");
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        html: '<span class="swal-custom-text">Unsupported file format. Please upload a CSV, XLSX, or XLS file.</span>',
+        customClass: {
+          htmlContainer: 'swal-custom-html',
+        }
+      });
     }
   };
 
   if (file.name.endsWith(".csv")) {
     reader.readAsText(file);
-    alert("File uploaded successfully!");
   } else if (file.name.endsWith(".xlsx") || file.name.endsWith(".xls")) {
     reader.readAsArrayBuffer(file);
-    alert("File uploaded successfully!");
   } else {
-    alert("Unsupported file format. Please upload a CSV, XLSX, or XLS file.");
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      html: '<span class="swal-custom-text">Unsupported file format. Please upload a CSV, XLSX, or XLS file.</span>',
+      customClass: {
+        htmlContainer: 'swal-custom-html',
+      }
+    });
   }
 };
 
@@ -151,18 +230,29 @@ const processData = (data) => {
       if (student.name && !isNaN(student.id)) {
         // Validate data
         students.push(student);
-        alert("Student added successfully!");
       }
     }
   });
 
   if (students.length > 0) {
     addStudents(students);
-    alert(
-      "Students added successfully!Please refresh the page to see the updated list. "
-    );
+    Swal.fire({
+      icon: 'success',
+      title: 'Success',
+      html: '<span class="swal-custom-text">Students added successfully! Please refresh the page to see the updated list.</span>',
+      customClass: {
+        htmlContainer: 'swal-custom-html',
+      }
+    });
   } else {
-    alert("No valid student data found in the file.");
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      html: '<span class="swal-custom-text">No valid student data found in the file.</span>',
+      customClass: {
+        htmlContainer: 'swal-custom-html',
+      }
+    });
   }
 };
 
@@ -175,5 +265,12 @@ const addStudents = (students) => {
     }
   });
   localStorage.setItem("studentData", JSON.stringify(studentData));
-  alert("Students added successfully!");
+  Swal.fire({
+    icon: 'success',
+    title: 'Success',
+    html: '<span class="swal-custom-text">Students added successfully!</span>',
+    customClass: {
+      htmlContainer: 'swal-custom-html',
+    }
+  });
 };

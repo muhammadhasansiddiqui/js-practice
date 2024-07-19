@@ -1,3 +1,79 @@
+*{
+margin: 0px;
+padding: 0px;
+    background: #002C4F;
+}
+
+
+.addSTU {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-top: 50px;
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .addSTU input {
+    background-color: #003c6e !important;
+    border: none;
+    padding: 6px;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+    width: 100%; /* Make inputs take full width on smaller screens */
+  }
+  .ATTEN {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    flex-direction: column;
+  }
+  
+  .attendance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .attendance input {
+    background-color: #003c6e  !important;
+    border: none;
+    padding: 6px;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+    width: 100%; /* Make input take full width on smaller screens */
+  }
+  
+
+  .btn {
+    background-color: #12558c !important;
+    border: none !important;
+    width: 100px;
+    color: khaki !important;
+    font-weight:bold !important;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 500px; /* Add margin to separate button from inputs */
+  }
+
+  .btn:hover {
+    background-color: #003c6e!important;
+  }
+
+  @media (min-width: 768px) {
+    .addSTU {
+      flex-direction: row; /* Stack items horizontally on larger screens */
+    }
+
+    .addSTU input {
+      width: auto; /* Make inputs take their natural width on larger screens */
+    }
+ 
+  }
+
 .attendance{
 
     display: flex;
@@ -8,26 +84,220 @@
 
     
 }
+.nav-item{
+    background: #F8F9FA !important;
 
-.btn {
-    background-color: #FF5533 !important;
 }
-
-.btn :hover {
-    background-color: #5a1d10aa !important;
+.navbar-collapse{
+    background: #F8F9FA !important;
 }
-.attendance input{
-    border: none;
-    background-color: blue !important;
+.navbar-toggler-icon{
+    background: lightblue !important;
     border-radius: 10px;
-    height: 5vh;
-
 
 }
+.container-fluid {
+    
+    background: #F8F9FA !important;
+    
+}
+.navbar-brand{
+    font-weight: 700 !important;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35px !important;
+    color: #002C4F !important;
+    text-shadow: gold 12px 2px 20px  ;
 
-.attendance button{
+    background: #F8F9FA !important;
+}
+.nav-link{
+    color: #002C4F !important;
+    transition: color 0.3s ease, text-shadow 0.3s ease !important;
+    font-weight: 700 !important;
+    border-radius: 10px !important;
+    background-color:rgb(255, 255, 255) !important;
+    width: 150px !important;
+    padding: 10px !important;
+    }
+
+    .nav-link:hover {
+        color: #095b9e !important; /* New color on hover */
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3) !important; /* Shadow effect on hover */
+      }
+
+
+
+
+/* history .html */
+#attendanceTable {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+  }
+  
+  #attendanceTable th, #attendanceTable td {
+    padding: 8px;
+    text-align: left;
+    color: khaki;
+    background: #002C4f;
+  }
+  
+  #attendanceTable th {
+    background-color: #F8CB00;
+    color: black  !important;
+    font-weight: bold;
+  }
+  
+  #attendanceTable tr:nth-child(even) {
+    background-color : #002C4F !important;
+    color: wheat !important;
+
+  }
+  
+  #attendanceTable tr:hover {
+    background-color:#002C4F !important;
+    color: wheat !important;
+
+  }
+  
+  #attendanceTable th, #attendanceTable td {
+    padding: 12px 15px;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: wheat !important;
+
+  }
+
+
+  /* studentDet.html */
+
+  #studentTable {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+  }
+  
+  #studentTable th, #studentTable td {
+    padding: 8px;
+    text-align: left;
+    color: khaki;
+    background: #002C4f;
+  }
+  
+  #studentTable th {
+    background-color: #F8CB00;
+    color: black !important;
+    font-weight: bold;
+  }
+  
+  #studentTable tr:nth-child(even) {
+    background-color: #002C4F !important;
+    color: wheat !important;
+  }
+  
+  #studentTable tr:hover {
+    background-color: #002C4F !important;
+    color: wheat !important;
+  }
+  
+  #studentTable th, #studentTable td {
+    padding: 12px 15px;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: wheat !important;
+  }
+
+  
+  /* stuFILE.html */
+/* Container for centering content */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Styling for file input */
+  #fileInput {
+    display: block;
+    padding: 6px;
     border: none;
     border-radius: 10px;
-    height: 5vh;
+    background-color: #003c6e;
+    color: white;
+    font-weight: bolder;
+    margin-top: -399px; /* Space between file input and button */
+  }
+  
+  /* Styling for buttons */
+  .btn {
+    width: 100px;
+    margin-top: 10px;
+  }
+  
+  /* Button hover effect */
+  .btn:hover {
+    background-color: #1b28daaa !important;
+  }
+  
 
+  /* main para */
+
+  .playwrite-cu-font {
+    font-family: "Playwrite CU", cursive;
+    font-weight: 500; /* Use a value from 100 to 400 */
+    font-style: normal;
+}
+
+#main-para {
+  padding-top: 25px;
+    text-align: center;
+    font-size: 40px; /* Adjust the size as needed */
+    color: #F8CB00;
+    text-shadow: 2px 2px 4px black; /* Adjust the shadow as needed */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  #main-para {
+      font-size: 35px; /* Slightly smaller for large tablets */
+  }
+}
+
+@media (max-width: 992px) {
+  #main-para {
+      font-size: 30px; /* Smaller for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  #main-para {
+      font-size: 25px; /* Smaller for small tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  #main-para {
+      font-size: 20px; /* Smaller for mobile devices */
+      padding-top: 20px; /* Adjust padding if necessary */
+  }
+}
+
+@media (max-width: 400px) {
+  #main-para {
+      font-size: 18px; /* Even smaller for very small screens */
+      padding-top: 15px; /* Adjust padding if necessary */
+  }
+}
+
+
+.swal-custom-html .swal-custom-text {
+  color: khaki;
+  font-weight: bold;
 }
