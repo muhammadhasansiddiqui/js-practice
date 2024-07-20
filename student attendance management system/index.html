@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+
+  <link rel="icon" href="Animation - 1721416841493.gif" type="image/x-icon">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Login</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+  <div id="loader"><img src="Animation - 1721416299408.gif" alt=""></div>
+  <div id="content" class="main-login">
+    <div class="left-login">
+      <h1>Students<br> Attendance Management System</h1>
+      <img src="person-working.svg" class="left-login-image" alt="Pessoa trabalhando">
+    </div>
+    <div class="right-login">
+      <div class="card-login">
+        <h1>LOGIN</h1>
+        <div class="textfield">
+          <label for="usuario">User Name</label>
+          <input type="text" name="usuario" id="username" placeholder="user name" required>
+        </div>
+        <div class="textfield">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="password" required>
+        </div>
+        <button class="btn-login" onclick="login()">Login</button>
+      </div>
+    </div>
+  </div>
+
+
+<script src="index.js"></script>
+  <script src="attendance.js"></script>
+
+
+</body>
+</html>
