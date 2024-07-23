@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/weather-app-logo.png" type="image/x-icon">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-div">
+        <div id="loader" class="loader"></div>
+
+        <div class="container">
+            <div class="main-div">
+                <div class="weather-div ms-auto me-auto mt-auto mb-auto">
+                    <div class="location-input">
+                        <input type="text" placeholder="Enter city" class="location-input-bar" id="weather-location">
+                        <div class="search-button" onclick="getWeather()"><i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                    <div class="location-text">
+                        <h3 id="city"></h3>
+                        <h3 id="country"></h3>
+                        <span id="date"></span>
+                    </div>
+                    <div class="weather-temp-img">
+                        <span id="weather-img-div" class="weather-img-div">
+                        </span>
+                        <div>
+                            <div class="temprature"><span id="temprature"></div>
+                            <div class="temprature-type" id="weather-type"></div>
+                        </div>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="weather-details">
+                        <div>
+                            <img src="images/feels-like.png" alt="wind speed" class="weather-details-img"
+                                id="weather-image">
+                            <span>Feels Like</span>
+                        </div>
+                        <div class="weather-details-value">
+                            <span id="feels-like"></span>
+                        </div>
+                    </div>
+                    <div class="weather-details">
+                        <div>
+                            <img src="images/humidity.png" alt="haze" class="weather-details-img">
+                            <span>Humidity</span>
+                        </div>
+                        <div class="weather-details-value">
+                            <span id="humidity"></span>
+                        </div>
+                    </div>
+                    <div class="weather-details">
+                        <div>
+                            <img src="images/clouds.png" alt="clouds" class="weather-details-img">
+                            <span>Clouds</span>
+                        </div>
+                        <div class="weather-details-value">
+                            <span id="clouds"></span>
+                        </div>
+                    </div>
+                    <div class="weather-details">
+                        <div>
+                            <img src="images/wind-speed.png" alt="wind speed" class="weather-details-img"
+                                id="weather-image">
+                            <span>Wind Speed</span>
+                        </div>
+                        <div class="weather-details-value">
+                            <span id="wind-speed"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"
+        integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="font-awesome.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

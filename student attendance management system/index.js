@@ -12,10 +12,14 @@ window.addEventListener('load', function() {
       Swal.fire({
         icon: 'warning',
         title: 'Warning',
-        html: '<span class="swal-custom-text">Wrong username or password.</span>',
+        html: '<span class="swal-custom-text">Wrong username or password. (name = "admin" password = "admin")</span>',
         customClass: {
           htmlContainer: 'swal-custom-html',
         }
       });
     }
   }
+
+
+  let file = document.getElementById("file-nav");
+  file = disable = true
