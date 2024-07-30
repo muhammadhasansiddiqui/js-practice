@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Create an account✨</h2>
+            <p>Welcome! Please enter your details.</p>
+            <form id="signupForm">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" minlength="8" placeholder="Enter your password" required>
+                    <small id="must">Must be at least 8 characters</small>
+                </div>
+                <button type="submit" id="signupBtn">Sign Up</button>
+                <div class="social-login">
+                    <button type="button" class="google" id="googleBtn">
+                        <img class="logo" src="images/google-logo-png.png" alt=""> Sign up with Google
+                    </button>
+                    <br> 
+                    <button type="button" class="facebook">
+                        <img class="logo" src="images/facebook-icon-png.webp" alt=""> Sign up with Facebook
+                    </button>
+                    <br>
+                    <button type="button" class="phone facebook" id="phoneLoginButton">
+                        <img class="logo" src="images/phone.logomsg.png" alt=""> <a href="phone_signup.html" id="must">Sign up with Phone</a> 
+                    </button>
+                </div>
+                <p>Already have an account? <a href="login.html" id="must">Log in</a></p>
+            </form>
+            <!-- <div id="recaptcha-container"></div> -->
+        </div>
+    </div>
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up with Phone</title>
+    <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Sign Up with Phone✨</h2>
+            <p>Enter your phone number to sign up.</p>
+            <form id="phoneSignupForm">
+                <div class="input-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                </div>
+                <button type="button" id="phoneBtn">Send OTP </button>
+            </form>
+            <div id="recaptcha-container"></div>
+        </div>
+    </div>
+
+    
+
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="app.js"></script>
+
+  
+</body>
+</html>
