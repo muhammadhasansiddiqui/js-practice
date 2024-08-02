@@ -11,6 +11,7 @@
 <body>
     <div class="container">
         <div class="form-container">
+            <img src="images/staranimated.gif" width="350px" height="100px" style="object-fit:contain;" alt="">
             <h2>Log in to your account✨</h2>
             <p>Welcome back! Please enter your details.</p>
             <form id="loginForm">
@@ -20,17 +21,17 @@
                 </div>
                 <div class="input-group">
                     <label for="loginPassword">Password</label>
-                    <input type="password" id="loginPassword" minlength="8" placeholder="Enter your password" required>
+                    <input type="password" id="loginPassword" minlength="6" placeholder="Enter your password" required>
                 </div>
                 <div class="options">
                     <label><input type="checkbox" class="rem"> Remember for 30 days</label>
                 </div>
-                <button type="submit">Log In</button>
+                <button type="submit" id="loginBtn">Log In</button>
                 <div class="social-login">
                     <button type="button" class="google" id="googleBtn">
                         <img class="logo" src="images/google-logo-png.png" alt="">Log in with Google
                     </button><br>
-                    <button type="button" class="facebook">
+                    <button type="button" class="facebook" id="fbBtn">
                         <img class="logo" src="images/facebook-icon-png.webp" alt="">Log in with Facebook
                     </button>
                 </div>

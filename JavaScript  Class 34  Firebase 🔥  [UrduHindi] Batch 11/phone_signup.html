@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up with Phone</title>
-    <link rel="stylesheet" href="styles.css">
-  
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="form-container">
-            <h2>Sign Up with Phone✨</h2>
-            <p>Enter your phone number to sign up.</p>
-            <form id="phoneSignupForm">
-                <div class="input-group">
-                    <label for="phoneNumber">Phone Number</label>
-                    <input type="tel" id="phone" placeholder="Enter your phone number" required>
-                </div>
-                <button type="button" id="phoneBtn">Send OTP </button>
-            </form>
-            <div id="recaptcha-container"></div>
-        </div>
-    </div>
+      <div class="form-container">
+        <img src="images/staranimated.gif" width="350px" height="100px" style="object-fit:contain;" alt="">
 
-    
+        <h2>Sign Up with Phone✨</h2>
+        <p>Enter your phone number to sign up.</p>
+        <form id="phoneSignupForm">
+          <div class="input-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter your phone number"
+              required
+            />
+          </div>
+          <button type="button" id="phoneBtn">Send OTP</button>
+        </form>
+        <div id="recaptcha-container"></div>
+        <form id="otpForm">
+          <div class="otp-group">
+            <input type="text" id="otp1" maxlength="1" required>
+            <input type="text" id="otp2" maxlength="1" required>
+            <input type="text" id="otp3" maxlength="1" required>
+            <input type="text" id="otp4" maxlength="1" required>
+            <input type="text" id="otp5" maxlength="1" required>
+            <input type="text" id="otp6" maxlength="1" required>
+          </div>
+          <button type="button" id="verifyBtn">Verify OTP</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html" id="must">Sign up</a></p>
+
+      </div>
+    </div>
 
     <script type="module" src="firebase.js"></script>
     <script type="module" src="app.js"></script>
-
-  
-</body>
+  </body>
 </html>

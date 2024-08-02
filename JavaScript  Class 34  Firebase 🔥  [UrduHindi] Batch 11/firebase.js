@@ -1,10 +1,15 @@
+// firebase.js
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import {
   getAuth,
   GoogleAuthProvider,
   signInWithPopup,
   RecaptchaVerifier,
-  signInWithPhoneNumber
+  signInWithPhoneNumber,
+  onAuthStateChanged ,
+  signOut ,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword 
 } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
 
 const firebaseConfig = {
@@ -14,12 +19,21 @@ const firebaseConfig = {
   storageBucket: "extended-legend-415308.appspot.com",
   messagingSenderId: "769368000323",
   appId: "1:769368000323:web:186f4630f1d4118f6cd1f6",
-  measurementId: "G-FMMPHYKG3Y"
+  measurementId: "G-FMMPHYKG3Y",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const googleProvider = new GoogleAuthProvider();
 
-export { auth, googleProvider, signInWithPopup, GoogleAuthProvider, RecaptchaVerifier, signInWithPhoneNumber };
+export {
+  auth,
+  GoogleAuthProvider,
+  signInWithPopup,
+  RecaptchaVerifier,
+  signInWithPhoneNumber,
+  onAuthStateChanged ,
+  signOut ,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword 
+};
