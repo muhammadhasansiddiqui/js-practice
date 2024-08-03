@@ -21,6 +21,19 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
+
+
+// fbBtn
+let fbBtn = document.getElementById("fbBtn");
+
+let fbFOO = ()=>{
+  alert("Comeing Soon")
+}
+
+fbBtn && fbBtn.addEventListener("click",fbFOO)
+
+
+
 // Google Sign-In
 const handleGoogleSignIn = async () => {
   const provider = new GoogleAuthProvider();
@@ -35,9 +48,9 @@ const handleGoogleSignIn = async () => {
 };
 
 const googleBtn = document.getElementById("googleBtn");
-if (googleBtn) {
-  googleBtn.addEventListener("click", handleGoogleSignIn);
-}
+
+ googleBtn && googleBtn.addEventListener("click", handleGoogleSignIn);
+
 
 // Phone Authentication
 if (document.getElementById("recaptcha-container")) {
@@ -56,24 +69,35 @@ if (document.getElementById("recaptcha-container")) {
   );
 }
 
-const sendOtp = async () => {
-  const phone = document.getElementById("phone").value;
+// Function to send OTP
+const sendOtp = () => {
+  const phone = document.getElementById("phone").value.trim();
   const appVerifier = window.recaptchaVerifier;
 
-  try {
-    const result = await signInWithPhoneNumber(auth, `+${phone}`, appVerifier);
-    console.log("OTP sent to:", phone);
-    window.confirmationResult = result; // Assign result for OTP verification
-  } catch (error) {
-    alert("Error sending OTP: " + error.message);
-    console.error("Error during OTP send:", error);
-  }
+  // Ensure phone number starts with '+'
+  // if (!phone.startsWith("+")) {
+  //   alert("Please include the country code with a + sign.");
+  //   return;
+  // }
+
+  console.log("Sending OTP to:", phone);
+  console.log("🚀 ~ sendOtp ~ `$+{phone}`:", `$+{phone}`);
+
+  signInWithPhoneNumber(auth, `+${phone}`, appVerifier)
+    .then((confirmationResult) => {
+      window.confirmationResult = confirmationResult;
+      alert("OTP sent successfully!");
+      console.log("Confirmation Result:", confirmationResult);
+    })
+    .catch((error) => {
+      alert("Error sending OTP: " + error.message);
+      console.error("Error:", error);
+    });
 };
 
 const phoneBtn = document.getElementById("phoneBtn");
-if (phoneBtn) {
-  phoneBtn.addEventListener("click", sendOtp);
-}
+phoneBtn && phoneBtn.addEventListener("click", sendOtp);
+
 
 // Verify OTP
 const verifyBtn = document.getElementById("verifyBtn");
@@ -116,9 +140,9 @@ const handleSignOut = async () => {
 };
 
 const signoutBtn = document.getElementById("signoutBtn");
-if (signoutBtn) {
-  signoutBtn.addEventListener("click", handleSignOut);
-}
+
+signoutBtn && signoutBtn.addEventListener("click", handleSignOut);
+
 
 // Email/Password Login
 const handleEmailPasswordLogin = async () => {
@@ -136,17 +160,19 @@ const handleEmailPasswordLogin = async () => {
 };
 
 const loginBtn = document.getElementById("loginBtn");
-if (loginBtn) {
-  loginBtn.addEventListener("click", handleEmailPasswordLogin);
-}
+
+loginBtn && loginBtn.addEventListener("click", handleEmailPasswordLogin);
+
 
 // Email/Password Sign-Up
-const handleEmailPasswordSignup = async () => {
+
+const handleEmailPasswordSignup = async (event) => {
+  event.preventDefault(); // Prevent form from submitting
   const email = document.getElementById("signupEmail").value;
   const password = document.getElementById("signupPassword").value;
 
   try {
-    await createUserWithEmailAndPassword(auth, email, password);
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     alert("Signup successful!");
     console.log("User signed up successfully:", userCredential);
     window.location.href = "user.html";
@@ -157,9 +183,11 @@ const handleEmailPasswordSignup = async () => {
 };
 
 const signupBtn = document.getElementById("signupBtn");
-if (signupBtn) {
-  signupBtn.addEventListener("click", handleEmailPasswordSignup);
-}
+
+signupBtn && signupBtn.addEventListener("click", handleEmailPasswordSignup);
+
+
+
 
 // // Log In
 // const loginForm = document.getElementById("loginForm");
