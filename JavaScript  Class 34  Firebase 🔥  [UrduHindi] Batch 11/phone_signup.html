@@ -5,11 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up with Phone</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/logo.gif" type="image/png">
+
+    <!-- SweetAlert2 CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+<!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   </head>
   <body>
     <div class="container">
       <div class="form-container">
         <img src="images/staranimated.gif" width="350px" height="100px" style="object-fit:contain;" alt="">
+
 
         <h2>Sign Up with Phone✨</h2>
         <p>Enter your phone number to sign up.</p>
@@ -23,7 +32,7 @@
               required
             />
           </div>
-          <button type="button" id="phoneBtn">Send OTP</button>
+          <button type="button" id="phoneBtn">Send OTP</button> 
         </form>
         <div id="recaptcha-container"></div>
         <form id="otpForm">

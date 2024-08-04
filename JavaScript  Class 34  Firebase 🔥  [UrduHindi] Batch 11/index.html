@@ -1,82 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Sign Up Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/logo.gif" type="image/png">
+
+    <!-- SweetAlert2 CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+<!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
-   <div class="container">
-       Google Sign-In 
-       <div class="form-container">
-          <h2>Sign In with Google✨</h2>
-          <button id="googleBtn">Sign In with Google</button>
-        </div>
-     
-        Phone Number Sign-Up
-       <div class="form-container">
-          <h2>Sign Up with Phone✨</h2>
-          <p>Enter your phone number to sign up.</p>
-          <form id="phoneSignupForm">
-            <div class="input-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" placeholder="Enter your phone number" required>
-            </div>
-            <button type="button" id="phoneBtn">Send OTP</button>
-          </form>
-          <div id="recaptcha-container"></div>
-        </div> 
-    
-       OTP Verification 
-       <div class="form-container">
-          <h2>Verify Your Phone Number✨</h2>
-          <p>Please enter the OTP sent to your phone number.</p>
-          <form id="otpForm">
-            <div class="otp-group">
-              <input type="text" maxlength="1" required>
-              <input type="text" maxlength="1" required>
-              <input type="text" maxlength="1" required>
-              <input type="text" maxlength="1" required>
-              <input type="text" maxlength="1" required>
-              <input type="text" maxlength="1" required>
-            </div>
-            <button type="button" id="verifyBtn">Verify OTP</button>
-          </form>
-          <p>Didn't receive the OTP? <a href="#" onclick="resendOTP()">Click to resend</a></p>
-        </div> 
-    
-       Email/Password Sign-Up 
-       <div class="form-container">
-          <h2>Sign Up with Email✨</h2>
-          <form id="signupForm">
-            <div class="input-group">
-              <label for="signupEmail">Email</label>
-              <input type="email" id="signupEmail" placeholder="Enter your email" required>
-           </div>
-            <div class="input-group">
-              <label for="signupPassword">Password</label>
-              <input type="password" id="signupPassword" placeholder="Enter your password" required>
-            </div>
-            <button type="submit">Sign Up</button>
-          </form>
-        </div>
-     Email/Password Login 
+    <div class="container">
         <div class="form-container">
-          <h2>Login with Email✨</h2>
-          <form id="loginForm">
-            <div class="input-group">
-              <label for="loginEmail">Email</label>
-              <input type="email" id="loginEmail" placeholder="Enter your email" required>
-            </div>
-            <div class="input-group">
-              <label for="loginPassword">Password</label>
-              <input type="password" id="loginPassword" placeholder="Enter your password" required>
-            </div>
-            <button type="submit">Login</button>
-          </form>
+            <img src="images/staranimated.gif" width="50px" style="object-fit:contain;" alt="Logo">
+            <h2>Log in to your account✨</h2>
+            <p>Welcome back! Please enter your details.</p>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" minlength="6" placeholder="Enter your password" required>
+                </div>
+                
+                <div id="error-message" style="color: red;"></div>
+                
+                <button type="button" id="loginBtn">Log In</button>
+                </form>
+                <div class="social-login">
+                    <button type="button" class="google" id="googleBtn">
+                        <img class="logo" src="images/google-logo-png.png" alt="Google Logo"> Log in with Google
+                    </button><br>
+                    
+                    <button type="button" class="facebook" id="fbBtn">
+                        <img class="logo" src="images/facebook-icon-png.webp" alt="Facebook Logo"> Log in with Facebook
+                    </button>
+                    <br>
+                    <button type="button" class="phone facebook" id="phoneLoginButton">
+                        <img class="logo" src="images/phone.logomsg.png" alt=""> <a href="phone_signup.html" id="must">Log in with Phone</a> 
+                    </button>
+                </div>
+                
+                <p>Don't have an account? <a href="signup.html" id="must">Sign up</a></p>
+            
         </div>
-      </div>
-     
-      <script type="module" src="firebase.js"></script>
-      <script type="module" src="app.js"></script>
+    </div>
+    
+    <script src="firebase.js" type="module"></script>
+    <script src="app.js" type="module"></script>
 </body>
 </html>
