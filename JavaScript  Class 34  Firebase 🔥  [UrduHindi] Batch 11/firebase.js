@@ -13,6 +13,13 @@ import {
   sendEmailVerification 
 } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
 
+
+// firestore
+
+import { doc, setDoc,getFirestore } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyAAFCfzc0RM7pWN54L79Q5mX4a2snu3VmA",
   authDomain: "extended-legend-415308.firebaseapp.com",
@@ -26,6 +33,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app);
 
 export {
   auth,
@@ -37,5 +45,8 @@ export {
   signOut ,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword ,
-  sendEmailVerification 
+  sendEmailVerification ,
+  doc, 
+  setDoc,
+  db
 };

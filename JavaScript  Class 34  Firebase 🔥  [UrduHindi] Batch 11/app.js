@@ -8,24 +8,55 @@ import {
   signOut,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
-  sendEmailVerification 
+  sendEmailVerification ,
+  doc, 
+  setDoc,
+  db,
 } from "./firebase.js";
+
+
+
+
+// Add user to Firestore
+let addUSERtoFIREsotre = async (user) => {
+  try {
+    await setDoc(doc(db, "Users", user.uid), {
+      uid: user.uid,
+      displayName: user.displayName,
+      email: user.email,
+      phoneNumber: user.phoneNumber,
+      photoURL: user.photoURL,
+      emailVerified: user.emailVerified,
+    });
+
+      // After successfully adding the user to Firestore, update the HTML
+      let abc = document.getElementById("abc");
+      if (abc) {
+        abc.innerHTML = `
+          <h1 style="color: red;">User Information</h1>
+          <div class="user-info">
+            <img src="${user.photoURL}" alt="${user.displayName}" class="user-img" style="width: 50px; height: 50px; border-radius: 50%;">
+            <span class="user-name">${user.displayName}</span>
+          </div>
+        `;
+      }
+
+
+    console.log('User added to Firestore');
+  } catch (error) {
+    console.error("Error adding user to Firestore:", error);
+  }
+};
+
 
 // Auth state observer
 onAuthStateChanged(auth, (user) => {
   if (user) {
     console.log("User is signed in:", user.email || user.phoneNumber);
-    if (location.pathname !== "/user.html") {
-      location.href = "user.html";
-    }
+   
   } else {
     console.log("User is signed out");
-    if (location.pathname !== "/index.html" && 
-      location.pathname !== "/signup.html"&&
-      location.pathname !== "/phone_signup.html"
-    ) {
-      location.href = "index.html";
-    }
+  
   }
 });
 
@@ -43,8 +74,13 @@ const handleGoogleSignIn = async () => {
   const provider = new GoogleAuthProvider();
   try {
     const result = await signInWithPopup(auth, provider);
+
+    // Add user to Firestore
+    addUSERtoFIREsotre(result.user);
+
+    // Show success message
     Swal.fire('User signed in!', `Welcome, ${result.user.displayName}!`, 'success');
-    window.location.href = "user.html";
+    //  window.location.href = "user.html";
   } catch (error) {
     Swal.fire('Error signing in with Google', error.message, 'error');
     console.error("Error signing in with Google:", error);
