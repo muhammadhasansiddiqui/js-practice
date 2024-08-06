@@ -1,3 +1,5 @@
+
+
 import {
   auth,
   GoogleAuthProvider,
@@ -30,16 +32,7 @@ let addUSERtoFIREsotre = async (user) => {
     });
 
       // After successfully adding the user to Firestore, update the HTML
-      let abc = document.getElementById("abc");
-      if (abc) {
-        abc.innerHTML = `
-          <h1 style="color: red;">User Information</h1>
-          <div class="user-info">
-            <img src="${user.photoURL}" alt="${user.displayName}" class="user-img" style="width: 50px; height: 50px; border-radius: 50%;">
-            <span class="user-name">${user.displayName}</span>
-          </div>
-        `;
-      }
+     
 
 
     console.log('User added to Firestore');
@@ -52,7 +45,21 @@ let addUSERtoFIREsotre = async (user) => {
 // Auth state observer
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    console.log("User is signed in:", user.email || user.phoneNumber);
+    console.log("User is signed in:", user.email || user.phoneNumber  );
+     
+    
+    let abc = document.getElementById("abc");
+    let displayNameOrEmail = user.displayName || user.phoneNumber || user.email.split('@')[0];
+    abc.innerHTML = `
+        <span> Welcome <i><b>${displayNameOrEmail}</b></i> </span><br>
+        <div class="userName">
+            <img class="userImg" src="${user.photoURL || 'images/userfb.png'}" alt="User Photo" />
+        </div>
+    `;
+    
+
+    
+
    
   } else {
     console.log("User is signed out");
@@ -76,11 +83,13 @@ const handleGoogleSignIn = async () => {
     const result = await signInWithPopup(auth, provider);
 
     // Add user to Firestore
-    addUSERtoFIREsotre(result.user);
 
     // Show success message
     Swal.fire('User signed in!', `Welcome, ${result.user.displayName}!`, 'success');
-    //  window.location.href = "user.html";
+
+    
+     window.location.href = "user.html";
+  
   } catch (error) {
     Swal.fire('Error signing in with Google', error.message, 'error');
     console.error("Error signing in with Google:", error);

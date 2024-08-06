@@ -109,7 +109,20 @@ button:hover {
 .img{
     filter: drop-shadow(10px 10px 15px yellow);
 }           
-    
+
+.userImg{
+border-radius: 100px; 
+
+filter: drop-shadow(2px 2px 11px white);
+width: 100px; 
+height: 100px; 
+object-fit: cover; 
+}
+
+.userName{
+
+    padding-top: 19px;
+}
 
 #recaptcha-container{
 padding-bottom: 10px;
