@@ -106,6 +106,10 @@ button:hover {
     color: gray !important;
 }
 
+.img{
+    filter: drop-shadow(10px 10px 15px yellow);
+}           
+    
 
 #recaptcha-container{
 padding-bottom: 10px;
