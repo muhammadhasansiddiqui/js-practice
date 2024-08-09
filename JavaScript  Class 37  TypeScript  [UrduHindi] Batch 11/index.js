@@ -1,3 +1,3 @@
-var num: string ="a";
-num = "d"
+var num = "a";
+num = "d";
 console.log("🚀 ~ num:", num);
