@@ -4,11 +4,13 @@
 
 function AnagramsFOO(e) {
   const ARR = {};
+  const darr ={}
 
   e.forEach((word) => {
     const anaWORD = word.split("").sort().join("");
     if (!ARR[anaWORD]) ARR[anaWORD] = [];
-    ARR[anaWORD].push(word);
+    var abc =  ARR[anaWORD].push(word);
+    abc.darr
   });
 
   return Object.values(ARR);
