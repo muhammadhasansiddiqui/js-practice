@@ -1,7 +1,7 @@
 
 // var student = [ "David Rayy", "Mike Thomas", "Jhonny Depp", "Jason Statham" ];
 
-// console.log(student);
+// console.log("student ==>"student);
 // console.log(student[2]);
 
 // console.log(student.length);
